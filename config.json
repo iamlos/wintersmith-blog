@@ -1,0 +1,27 @@
+{
+  "locals": {
+    "url": "/",
+    "name": "Hi, I'm Peter",
+    "owner": "Peter Szymczak",
+    "description": "I make the web for a living."
+  },
+  "plugins": [
+    "./plugins/paginator.coffee",
+    "wintersmith-handlebars"
+  ],
+  "require": {
+    "moment": "moment",
+    "_": "underscore",
+    "typogr": "typogr"
+  },
+  "jade": {
+    "pretty": true
+  },
+  "markdown": {
+    "smartLists": true,
+    "smartypants": true
+  },
+  "paginator": {
+    "perPage": 3
+  }
+}

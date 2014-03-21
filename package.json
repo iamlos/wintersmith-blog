@@ -1,0 +1,21 @@
+{
+  "dependencies": {
+    "moment": "2.3.x",
+    "underscore": "1.4.x",
+    "typogr": "0.5.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "none"
+  },
+  "name": "webforaliving",
+  "description": "The default [wintersmith](https://github.com/jnordberg/wintersmith) template",
+  "version": "0.0.1",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
