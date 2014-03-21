@@ -1,4 +1,4 @@
 {
-  "template": "feed.jade",
+  "template": "feed.hbs",
   "filename": "feed.xml"
 }

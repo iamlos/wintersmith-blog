@@ -1,0 +1,27 @@
+{{> html}}
+	<main id="post">
+		{{> header}}
+		<article class="container box style3">
+			<header>
+				<h2><a href="{{page.url}}">{{page.title}}</a></h2>
+				<p class="date"><span>{{date page.metadata.date}}</span></p>
+			</header>
+			<section>
+				{{{typogr page.html}}}
+			</section>
+
+			{{#if page.metadata.comments}}
+				{{> disqus}}
+			{{/if}}
+
+		</article>
+
+		<!-- Back to Blog Box -->
+		<article class="container box style2">
+			<header>
+				<h2><a href="/blog/">&larr; Return to Blog</a></h2>
+			</header>
+		</article>
+		{{> footer}}
+	</main>
+{{> close}}

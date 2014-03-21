@@ -1,0 +1,15 @@
+<!-- Footer -->
+<footer id="footer">
+  {{#if page.markdown}}<div class="article-footer-bg-overlay">{{/if}}
+  <section class="about container">
+    {{#with contents.copy}}
+      {{{typogr [footer-text.md].html}}}
+    {{/with}}
+  </section>
+  <section class="copyright">
+    <ul class="menu">
+      <li>Generated with <a href="http://wintersmith.io/">Wintersmith</a></li>
+    </ul>
+  </section>
+  {{#if page.markdown}}</div>{{/if}}
+</footer>

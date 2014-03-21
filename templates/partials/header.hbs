@@ -1,0 +1,33 @@
+<!-- Header -->
+<section id="{{#unless homePage}}page-{{/unless}}header">
+
+  {{#if homePage}}
+  <nav>
+    <ul class="actions">
+        <li><a href="{{#unless homePage}}/blog/{{else}}#first" class="scroll{{/unless}}">blog</a></li>
+        <li><a href="{{#unless homePage}}/about/{{else}}#banner" class="scroll{{/unless}}">about</a></li>
+        <li><a href="{{#unless homePage}}/{{/unless}}#contact" class="scroll">contact</a></li>
+    </ul>
+  </nav>
+  {{/if}}
+
+  <header>
+    {{#with page}}
+      <p>{{#if metadata.content}}{{title}}{{else}}Blog{{/if}}</p>
+    {{/with}}
+    <h1><a href="/">{{name}}</a></h1>
+    <p>{{description}}</p>
+    <ul class="icons">
+        <li><a href="https://github.com/nason" class="icon-git"></a></li>
+        <li><a href="https://linkedin.com/in/michaelnason" class="icon-linkedin"></a></li>
+        <li><a href="{{#unless homePage}}/{{/unless}}#contact" class="icon-mail scroll"></a></li>
+    </ul>
+  </header>
+
+  {{#if homePage}}
+  <footer>
+    <a href="#banner" class="button style2 scroll"><strong>Proceed</strong> &crarr;</a>
+  </footer>
+  {{/if}}
+
+</section>

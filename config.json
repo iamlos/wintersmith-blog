@@ -3,12 +3,17 @@
     "url": "/",
     "name": "Hi, I'm Peter",
     "owner": "Peter Szymczak",
-    "description": "I make the web for a living."
+    "description": "I make the web for a living.",
+    "feedPath": "/feed.xml"
   },
   "plugins": [
     "./plugins/paginator.coffee",
+    "./plugins/home.coffee",
     "wintersmith-handlebars"
   ],
+  "shared": {
+    "articles": "articles"
+  },
   "require": {
     "moment": "moment",
     "_": "underscore",
@@ -22,6 +27,10 @@
     "smartypants": true
   },
   "paginator": {
-    "perPage": 3
-  }
+    "perPage": 3,
+    "template": "blog.hbs"
+  },
+  "ignore": [
+    "**/.DS_Store"
+  ]
 }

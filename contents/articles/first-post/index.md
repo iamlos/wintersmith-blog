@@ -2,7 +2,7 @@
 title: Switching to Wintersmith for blogging
 author: peter
 date: 2014-03-20 14:12
-template: article.jade
+template: article.hbs
 ---
 
 I've used WordPress, Drupal, and other platforms in past for personal blogs, and for the most part, they've always been

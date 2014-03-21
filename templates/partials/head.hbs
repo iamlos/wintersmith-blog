@@ -1,0 +1,24 @@
+<head>
+    <title>{{#if page}}{{page.title}} | {{/if}}{{ name }}</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui" />
+    <meta name="description" content="{{#if page}}{{ stripTags page.intro }}{{else}}{{ description }}{{/if}}">
+    <meta name="keywords" content="{{ keywords }}">
+    {{> og}}
+    <meta name="signet:authors" content="Michael Nason">
+    <meta name="signet:links" content="https://github.com/nason, https://twitter.com/nasonosan, http://nason.us">
+    <link rel="alternate" href="{{ url }}{{ feedPath }}" type="application/rss+xml" title="{{ name }}">
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,300italic" rel="stylesheet" type="text/css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+
+    <script src="/js/vendor/head.js" data-headjs-load="/js/{{#if homePage}}home{{else}}init{{/if}}.js"></script>
+
+    <noscript>
+        <link rel="stylesheet" href="/css/skel-noscript.css" />
+    </noscript>
+    <!--[if lte IE 8]><link rel="stylesheet" href="/css/ie/v8.css" /><![endif]-->
+    <!--[if lte IE 8]><script src="/css/ie/html5shiv.js"></script><![endif]-->
+</head>
