@@ -1,71 +1,8 @@
 {{> html}}
   {{> header}}
-  <div class="transparent-overlay">
-    <!-- About -->
-    <section id="banner">
-        <header>
-            <img class="profile" src="/images/profile.jpg" />
-            <h2 id="intro">Hi, my name is <strong>Peter</strong>.</h2>
-        </header>
-        <p>I am a <strong>web developer</strong> in Vancouver.</p>
-        <h3><a href="/about/">Read more about me &rarr;</a></h3>
-        <footer>
-            <a href="#first" class="button style2 scroll">Check out my lastest posts &darr;</a>
-        </footer>
-    </section>
 
-    <!-- Blog Header -->
-    <article class="container box style2">
-        <header>
-            <h2>I Write</h2>
-            <p>Code + words</p>
-        </header>
-    </article>
+  {{> left_sidebar}}
 
-    {{{featured articles}}}
+   {{{featured articles}}}
 
-    <!-- Blog Link -->
-    <article id="blog-box" class="container box style2">
-        <div class="inner">
-            <a href="/blog/">
-                <header>
-                    <p>For more articles</p>
-                    <h2><a href="/blog/">Visit my blog &rarr;</a></h2>
-                </header>
-            </a>
-        </div>
-    </article>
-
-    <!-- Contact -->
-    <article id="contact" class="container box style3">
-        <header>
-            <h2>Get in touch</h2>
-            <p>Send me a message & I'll get back to you right away.</p>
-        </header>
-        <header id="contact-error">
-            <h2>Oops</h2>
-            <p>There was a problem submitting your message.<br />Please make sure to fill out all three fields and try again.</p>
-        </header>
-        <form id="email" method="POST" action="#">
-            <div class="row half">
-                <div class="6u"><input type="text" class="text" name="name" placeholder="Name" /></div>
-                <div class="6u"><input type="email" class="text" name="email" placeholder="Email" /></div>
-            </div>
-            <div class="row half">
-                <div class="12u">
-                    <textarea name="message" placeholder="Message"></textarea>
-                </div>
-            </div>
-            <div class="row">
-                <div class="12u">
-                    <ul class="actions">
-                        <li><button type="submit" class="button form">Send Message</button></li>
-                    </ul>
-                </div>
-            </div>
-        </form>
-    </article>
-
-    {{> footer}}
-  </div> <!-- .transparent-overlay -->
-{{> close}}
+  {{> footer}}
