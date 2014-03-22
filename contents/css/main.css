@@ -97,6 +97,12 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+/* apply a natural box layout model to all elements */
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+ }
+
+
 html{
   height:100%;
 }
@@ -116,53 +122,25 @@ a:link, a:visited {
   text-decoration: none;
 }
 
-#logo {
-  width:181px;
-  height: 83px;
-  display: block;
-  overflow: hidden;
-  text-indent: 100%;
-  white-space: nowrap;
-  font-size: 1px;
-  background: rgba(0,0,0,.7) 9px 17px url(../img/logo.svg) no-repeat;
-  float:left;
-  background-size:162px 50px;
-  margin:20px;
-}
 
-.container {
-  font-size:1.25em;
-  max-width:700px;
-  margin:auto;
+#sidebar {
+  font-size:1.15em;
+  width:410px;
   text-align: left;
+  padding:3em 3em 1em 3em;
+  position:absolute;
+  left:0;
+  top:0;
 }
 
-.container h2 {
-  font-size:2.6em;
+#sidebar h2 {
+  font-size:2.3em;
   line-height:1em;
   font-family: "proxima-nova-condensed",sans-serif;
-  margin:15px 0 15px -6px;
+  margin:15px 0 5px -2px;
   text-transform: uppercase;
 }
-.container p {
-  margin-top:0;
-}
-
-.left_sidebar {
-  font-size:1.25em;
-  width:29em;
-  margin:auto;
-  text-align: left;
-}
-
-.left_sidebar h2 {
-  font-size:5.5em;
-  line-height:1em;
-  font-family: "proxima-nova-condensed",sans-serif;
-  margin:15px 0 15px -6px;
-  text-transform: uppercase;
-}
-.left_sidebar p {
+#sidebar p {
   margin-top:0;
 }
 .social {
@@ -178,17 +156,68 @@ a:link, a:visited {
 
 .peter {
   border-radius:100px;
-  text-align: center;
-  margin:auto;
   display:block;
   opacity:0.95;
+  margin-bottom:1em;
+}
+
+.container, #footer {
+  padding-right:3em;
+}
+
+
+.container {
+  font-size:1.25em;
+  /*max-width:800px;
+  margin:auto;*/
+  text-align: left;
+}
+
+.container h2 {
+  font-size:2.4em;
+  line-height:1em;
+  font-family: "proxima-nova-condensed",sans-serif;
+  margin:15px 0 15px -6px;
+  text-transform: uppercase;
+}
+.container p {
+  margin-top:0;
 }
 
 
 
 
-article.container.box {
-  margin-bottom:5em;
+#main-content {
+  margin-top:3em;
+  margin-left:410px;
+}
+
+.home article, article.container.box {
+  margin-bottom:3em;
+}
+
+article .summary a, article .content a {
+  border-bottom:1px solid rgba(255,255,255,0.4);
+}
+
+article .summary a:hover, article .content a:hover {
+  border-bottom:1px solid rgba(255,255,255,0.8);
+}
+
+article .summary .more a{
+  color:#fff;
+  border-bottom:0;
+}
+
+#footer {
+  /*width:800px;
+  margin:auto;*/
+}
+
+#footer ul {
+  list-style-type: none;
+  margin:1em 0;
+  padding:0;
 }
 
 

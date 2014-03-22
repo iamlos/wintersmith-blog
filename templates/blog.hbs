@@ -1,19 +1,10 @@
-{{> html}}
 	<main id="blog">
 		{{> header}}
 
 		{{> left_sidebar}}
 
-		<!-- Blog Header -->
-		<article class="container box style2">
-				<header>
-						<h2>Blog</h2>
-						{{! TODO: Add Page X of N}}
-				</header>
-		</article>
 
-		<!-- Blog Posts -->
-		<article class="container box style3">
+		<article class="container box">
 			{{#each articles}}
 			<section>
 				<header>
@@ -49,4 +40,3 @@
 		</article>
 		{{> footer}}
 	</main>
-{{> close}}

@@ -9,7 +9,7 @@
     "url": "none"
   },
   "name": "webforaliving",
-  "description": "The default [wintersmith](https://github.com/jnordberg/wintersmith) template",
+  "description": "Wintersmith blog with handlebars",
   "version": "0.0.1",
   "main": "index.js",
   "devDependencies": {},

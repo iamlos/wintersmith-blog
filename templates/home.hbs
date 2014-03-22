@@ -1,8 +1,38 @@
-{{> html}}
   {{> header}}
 
-  {{> left_sidebar}}
+  {{> sidebar}}
 
-   {{{featured articles}}}
+  <main id="main-content" class="home">
+   <section class="container box">
+      {{#each articles}}
+      <article>
+        <header>
+          <h2><a href="{{url}}">{{title}}</a></h2>
+        </header>
+        <section class="summary">
+          {{{typogr intro}}}
+          {{#if hasMore}}
+            <p class="more"><a href="{{url}}">Continue reading &rarr;</a></p>
+          {{/if}}
+        </section>
+      </article>
+      {{/each}}
 
+      <footer>
+        <nav class="nav">
+          {{#if prevPage}}
+            <div class="newer">
+              <a href="{{prevPage.url}}">Newer » </a>
+            </div>
+          {{/if}}
+          {{#if nextPage}}
+            <div class="older">
+              <a href="{{nextPage.url}}"> « Older</a>
+            </div>
+          {{/if}}
+        </nav>
+      </footer>
+
+    </section>
   {{> footer}}
+  </main>

@@ -10,51 +10,22 @@
 overkill for what I needed the site to do. I love the idea behind static site generators like Wintersmith. 
 ">
     <meta name="keywords" content="">
-    <meta property="profile:first_name" content="Peter" />
-<meta property="profile:last_name" content="Szymczak" />
-<meta property="og:title" content="Switching to Wintersmith for blogging | Hi, I&#x27;m Peter" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="//articles/first-post/" />
-<meta property="og:image" content="//images/profile.jpg" />
-    <meta name="signet:authors" content="Michael Nason">
-    <meta name="signet:links" content="https://github.com/nason, https://twitter.com/nasonosan, http://nason.us">
     <link rel="alternate" href="//feed.xml" type="application/rss+xml" title="Hi, I&#x27;m Peter">
-    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,300italic" rel="stylesheet" type="text/css" />
 
-    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
-    <script src="/js/vendor/head.js" data-headjs-load="/js/init.js"></script>
-
-    <noscript>
-        <link rel="stylesheet" href="/css/skel-noscript.css" />
-    </noscript>
-    <!--[if lte IE 8]><link rel="stylesheet" href="/css/ie/v8.css" /><![endif]-->
-    <!--[if lte IE 8]><script src="/css/ie/html5shiv.js"></script><![endif]-->
+    <script src="/js/vendor/modernizr-2.6.2.min.js"></script>
+    <script type="text/javascript" src="//use.typekit.net/ewy6xec.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 </head>
   <body>
-    
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
 	<main id="post">
-		<!-- Header -->
-<section id="page-header">
-
-  
-
-  <header>
-    
-      <p>Blog</p>
-    
-    <h1><a href="/">Hi, I&#x27;m Peter</a></h1>
-    <p>I make the web for a living.</p>
-    <ul class="icons">
-        <li><a href="https://github.com/nason" class="icon-git"></a></li>
-        <li><a href="https://linkedin.com/in/michaelnason" class="icon-linkedin"></a></li>
-        <li><a href="/#contact" class="icon-mail scroll"></a></li>
-    </ul>
-  </header>
-
-  
-
-</section>
+		
 		<article class="container box style3">
 			<header>
 				<h2><a href="/articles/first-post/">Switching to Wintersmith for blogging</a></h2>
@@ -96,6 +67,26 @@ overkill for what I needed the site to do. I love the idea behind static site ge
   </section>
   </div>
 </footer>
-	</main>
-  </body>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
+
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+
+
+
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<script>
+    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+    e.src='//www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+    ga('create','UA-XXXXX-X');ga('send','pageview');
+</script>
+
+</body>
 </html>
+	</main>

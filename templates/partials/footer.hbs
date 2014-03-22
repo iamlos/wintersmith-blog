@@ -1,25 +1,17 @@
 <!-- Footer -->
 <footer id="footer">
-  {{#if page.markdown}}<div class="article-footer-bg-overlay">{{/if}}
-  <section class="about container">
-    {{#with contents.copy}}
-      {{{typogr [footer-text.md].html}}}
-    {{/with}}
-  </section>
   <section class="copyright">
     <ul class="menu">
       <li>Generated with <a href="http://wintersmith.io/">Wintersmith</a></li>
     </ul>
   </section>
-  {{#if page.markdown}}</div>{{/if}}
 </footer>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+<script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
 
-<script src="js/plugins.js"></script>
-<script src="js/main.js"></script>
+<script src="/js/main.js"></script>
 
 
 

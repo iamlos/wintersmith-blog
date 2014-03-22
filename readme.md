@@ -1,4 +1,4 @@
 
-# Blog
+# Wintersmith blog
 
-The default [wintersmith](https://github.com/jnordberg/wintersmith) template
+Wintersmith blog using Handlebars for templates
