@@ -2,34 +2,23 @@
 
 <rss version='2.0' xmlns:content='http://purl.org/rss/1.0/modules/content/' xmlns:wfw='http://wellformedweb.org/CommentAPI/' xmlns:dc='http://purl.org/dc/elements/1.1/' xmlns:atom='http://www.w3.org/2005/Atom'>
   <channel>
-    <title>Hi, I&#x27;m Peter></title>
+    <title>Hi, I&#x27;m Peter</title>
     <atom:link href="//feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>/</link>
     <description>I make the web for a living.</description>
-    <pubDate>Thu, 20 Mar 2014 14:12:00 -0700</pubDate>
+    <pubDate>Sat, 22 Mar 2014 13:37:00 -0700</pubDate>
     <language>en</language>
 
     
     
     <item>
-      <title>Code and stuff!</title>
-      <link>//articles/another-test/</link>
-      <pubDate>Mon, 01 Oct 2012 15:00:00 -0700</pubDate>
-      <guid isPermaLink="true">//articles/another-test/</guid>
-      <author>the-wintersmith</author>
-      <description>Syntax highlighting with highlight.js.
-The theme used is tomorrow, you can find more themes here.
-</description>
-    </item>
-    
-    <item>
-      <title>Switching to Wintersmith for blogging</title>
-      <link>//articles/first-post/</link>
-      <pubDate>Thu, 20 Mar 2014 14:12:00 -0700</pubDate>
-      <guid isPermaLink="true">//articles/first-post/</guid>
+      <title>Trying Wintersmith for blogging</title>
+      <link>//articles/trying-wintersmith-for-blogging/</link>
+      <pubDate>Sat, 22 Mar 2014 13:37:00 -0700</pubDate>
+      <guid isPermaLink="true">//articles/trying-wintersmith-for-blogging/</guid>
       <author>peter</author>
       <description>I’ve used WordPress, Drupal, and other platforms in past for personal blogs, and for the most part, they’ve always been
-overkill for what I needed the site to do. I love the idea behind static site generators like Wintersmith. 
+overkill for what I needed the site to do. The idea of using a static site generator like Wintersmith for its the simplicity and performance sounded pretty appealing, so I’m giving it a try.
 </description>
     </item>
     
