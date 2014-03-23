@@ -111,7 +111,7 @@ html{
   height:100%;
 }
 body{
-  background-color:#05b2c6;
+  background-color:#444;
   width:100%;
   font-family: "proxima-nova",sans-serif;
   color:#fff;
@@ -129,12 +129,15 @@ a:link, a:visited {
 
 #sidebar {
   font-size:1.15em;
-  width:410px;
+  width:360px;
   text-align: left;
   padding:3em 3em 1em 3em;
   position:absolute;
   left:0;
   top:0;
+  bottom:0;
+  height:100%;
+  background-color:#05b2c6;
 }
 
 #sidebar h2 {
@@ -162,7 +165,9 @@ a:link, a:visited {
   border-radius:100px;
   display:block;
   opacity:0.95;
+  margin:auto;
   margin-bottom:1em;
+
 }
 
 .container, #footer {
