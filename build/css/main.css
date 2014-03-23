@@ -116,15 +116,20 @@ a:link, a:visited {
 
 #sidebar {
   font-size: 1.15em;
-  width: 360px;
   text-align: left;
-  padding: 3em 3em 1em 3em;
-  position: fixed;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  height: 100%;
   background-color: #05b2c6;
+  padding: 2em 2em 1em 2em;
+}
+@media (min-width: 768px) {
+  #sidebar {
+    width: 346px;
+    padding: 3em 3em 1em 3em;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+  }
 }
 
 #sidebar h2 {
@@ -158,23 +163,28 @@ a:link, a:visited {
   margin-bottom: 1em;
 }
 
-.container, #footer {
-  padding-right: 3em;
+@media (min-width: 768px) {
+  .container, #footer {
+    padding-right: 3em;
+  }
 }
 
 .container {
   font-size: 1.25em;
-  /*max-width:800px;
-  margin:auto;*/
   text-align: left;
 }
 
 .container h2 {
-  font-size: 2.4em;
+  font-size: 2em;
   line-height: 1em;
   font-family: "proxima-nova-condensed",sans-serif;
   margin: 15px 0 15px -6px;
   text-transform: uppercase;
+}
+@media (min-width: 768px) {
+  .container h2 {
+    font-size: 2.4em;
+  }
 }
 
 .container p {
@@ -182,8 +192,14 @@ a:link, a:visited {
 }
 
 #main-content {
-  margin-top: 3em;
-  margin-left: 410px;
+  padding: 2em 2em 1em 2em;
+}
+@media (min-width: 768px) {
+  #main-content {
+    padding: 0;
+    margin-top: 3em;
+    margin-left: 400px;
+  }
 }
 
 .home article, article.container.box {
