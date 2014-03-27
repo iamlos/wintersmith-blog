@@ -1,14 +1,14 @@
   <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Hi, I&#x27;m Peter</title>
+    <title>Technology, design, and development - technoholic.ca</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui" />
-    <meta name="description" content="I make the web for a living.">
+    <meta name="description" content="One man&#x27;s obsession with creating the interwebs.">
     <meta name="keywords" content="">
-    <link rel="alternate" href="//feed.xml" type="application/rss+xml" title="Hi, I&#x27;m Peter">
+    <link rel="alternate" href="//feed.xml" type="application/rss+xml" title="Technology, design, and development - technoholic.ca">
 
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/main.css">
@@ -34,7 +34,7 @@
       <li><a href="http://instagram.com/petethedude" target="_blank"><i class="fa fa-instagram"></i></a></li>
       <li><a href="http://ca.linkedin.com/pub/peter-szymczak/9/906/35a" target="_blank"><i class="fa fa-linkedin"></i></a></li>
       <li><a href="http://www.github.com/petethedude" target="_blank"><i class="fa fa-github"></i></a></li>
-      <li><a href="mailto:peter@defiantinteractive.ca" target="_blank"><i class="fa fa-envelope"></i></a></li>
+      <li><a href="mailto:peter@defiant.io" target="_blank"><i class="fa fa-envelope"></i></a></li>
     </ul>
   </p>
 </aside>
@@ -56,15 +56,93 @@ overkill for what I needed the site to do. The idea of using a static site gener
         </section>
       </article>
       
+      <article>
+        <header>
+          <h2><a href="/articles/new-ghost-inspired-wordpress-theme/">New Ghost.js inspired WordPress theme</a></h2>
+        </header>
+        <section class="summary">
+          <p>Recently, I’ve been inspired by the Ghost blogging platform, which I think has a really clean and elegant default theme, so I built a WordPress theme that borrows from some of the ideas that I liked from that&nbsp;theme.
+
+          
+            <p class="more"><a href="/articles/new-ghost-inspired-wordpress-theme/">Continue reading &rarr;</a></p>
+          
+        </section>
+      </article>
+      
+      <article>
+        <header>
+          <h2><a href="/articles/improving-your-jquery-code/">Improving your jQuery code</a></h2>
+        </header>
+        <section class="summary">
+          <p>Lately, I’ve been trying to improve my jQuery code performance, and get a better handle on writing plain JavaScript. In terms of jQuery in particular, I came across <a href="http://24ways.org/2011/your-jquery-now-with-less-suck/">this post</a> today, which although a couple years old now, provides some great tips that I think a lot of people could benefit from reading. There are a few great examples of writing better performing jQuery <span class="caps">DOM</span> manipulation in&nbsp;there.</p>
+
+          
+        </section>
+      </article>
+      
+      <article>
+        <header>
+          <h2><a href="/articles/drupal-6-page-tpl-php-template-based-on-path/">Drupal 6 page.tpl.php template based on path</a></h2>
+        </header>
+        <section class="summary">
+          <p>Use custom page.tpl.php files based on the <span class="caps">URL</span> path alias of your pages to create custom template files. Add the following code to your theme’s template.php&nbsp;file.</p>
+<pre><code class="lang-php"><span class="function"><span class="keyword">function</span> <span class="title">phptemplate_engine_preprocess_page</span><span class="params">(&amp;<span class="variable">$variables</span>)</span> {</span>
+  <span class="variable">$alias</span> = drupal_get_path_alias(<span class="variable">$_GET</span>[<span class="string">'q'</span>]);
+
+  <span class="keyword">if</span> (<span class="variable">$alias</span> != <span class="variable">$_GET</span>[<span class="string">'q'</span>]) {
+    <span class="variable">$template_filename</span> = <span class="string">'page'</span>;
+
+    <span class="keyword">foreach</span> (explode(<span class="string">'/'</span>, <span class="variable">$alias</span>) <span class="keyword">as</span> <span class="variable">$path_part</span>) {
+      <span class="variable">$template_filename</span> = <span class="variable">$template_filename</span> . <span class="string">'-'</span> . <span class="variable">$path_part</span>;
+      <span class="variable">$variables</span>[<span class="string">'template_files'</span>][] = <span class="variable">$template_filename</span>;
+    }
+  }
+}
+</code></pre>
+<p>Create a copy of page.tpl.php and rename it to page-<span class="caps">YOURPATH</span>.tpl.php and begin to make your own custom edits specific to that path. Now, if you’ve got a www.yoursite.com/blog path, then Drupal will pick up page-blog.tpl.php as the template for that page. The above code is for Drupal 6. You may need to clear Drupal’s cache after you’ve done this for it to take&nbsp;effect.</p>
+
+          
+        </section>
+      </article>
+      
+      <article>
+        <header>
+          <h2><a href="/articles/jquery-shine-animation-effect/">jQuery Shine animation effect</a></h2>
+        </header>
+        <section class="summary">
+          <p>I&#39;ve been diving deeper into jQuery lately, because a few clients have been requesting Flash-like functionality for their websites, and I&#39;ve been avoiding Flash since before Steve Jobs made it cool to do so. I have to say, there is more and more that jQuery can do that Flash used to only do. I recently came across one great example of this while researching button effects for a personal project (release coming soon). Addy from AddyOsmani.com posted this great article about a shine effect using jQuery called <a href="http://&amp;/#x2F;&#x2F;addyosmani.com&#x2F;blog&#x2F;shinetime&#x2F;">&quot;ShineTime – A Kick-Ass New jQuery &amp;amp; <span class="caps">CSS3</span> Gallery With Animated Shine Effects.&quot;</a> The best part of the effect is that it&#39;s so simple to implement and if you&#39;re at all comfortable with jQuery and <span class="caps">CSS</span>, the method used with background-position opens up a world of possibility with other effects other than shine, which at least I wasn&#39;t aware of. Check out <a href="http://&amp;/#x2F;&#x2F;www.addyosmani.com&#x2F;resources&#x2F;shinetime">his demo</a> to see the effect in&nbsp;action.</p>
+<p>The entire thing really boils down to a few lines of jQuery Javascript code and some <span class="caps">CSS</span>. When a event happens, such as a hover or a page load, a shine PNG image is changed from a background position of off the screen to one that crosses to the other side off the screen. With a little modification, I made the effect display a few seconds after the page loads using setTimeout, rather than when you hover over an element, which produced a great little embellishment for a button or a logo when a visitors comes to the site. It&#39;s a great little effect that you used to only be able to do with&nbsp;Flash.</p>
+
+          
+        </section>
+      </article>
+      
+      <article>
+        <header>
+          <h2><a href="/articles/100-really-good-quality-iphone-and-ipod-touch-wallpapers/">100 Really Good Quality iPhone and iPod Touch Wallpapers</a></h2>
+        </header>
+        <section class="summary">
+          <p>In my <a href="http://&amp;/#x2F;&#x2F;www.technoholic.ca&#x2F;quality-iphone-and-ipod-touch-wallpapers-poolga&#x2F;">last post</a>, I wrote about Poolgo, a great little site with really good iPhone wallpapers. These are quality wallpapers made by real designers. Well, today I happened upon a <a href="http://&amp;/#x2F;&#x2F;www.smashingmagazine.com&#x2F;2009&#x2F;01&#x2F;06&#x2F;100-really-beautiful-iphone-wallpapers&#x2F;%20&quot;smashing%20magazine%20article&quot;">Smashing Magazine article</a> with 100 really sweet iPhone wallpapers, which includes Poolgo in its list, but also includes way more other wallpapers. I just had to post and update with a link to this Smashing Magazine article, because it really goes way above and beyond what I&nbsp;wrote.</p>
+<p>If you&#39;re looking for some great iPhone or iPod Touch wallpapers, you need to read <a href="http://&amp;/#x2F;&#x2F;www.smashingmagazine.com&#x2F;2009&#x2F;01&#x2F;06&#x2F;100-really-beautiful-iphone-wallpapers&#x2F;%20&quot;smashing%20magazine&quot;">this article</a>.</p>
+
+          
+        </section>
+      </article>
+      
 
       <footer>
         <nav class="nav">
           
           
+            <div class="older">
+              <a href="/page/2/"> « Older</a>
+            </div>
+          
         </nav>
       </footer>
 
     </section>
+  </main>
   <!-- Footer -->
 <footer id="footer">
   <section class="copyright">
@@ -80,18 +158,15 @@ overkill for what I needed the site to do. The idea of using a static site gener
 
 <script src="/js/main.js"></script>
 
-
-
-<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 <script>
     (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
     function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
     e=o.createElement(i);r=o.getElementsByTagName(i)[0];
     e.src='//www.google-analytics.com/analytics.js';
     r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-    ga('create','UA-XXXXX-X');ga('send','pageview');
+    ga('create','UA-2081694-2');ga('send','pageview');
 </script>
 
 </body>
 </html>
-  </main>
+

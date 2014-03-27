@@ -1,4 +1,6 @@
 @import "compass";
+@import "compass/css3/transition";
+@import "compass/css3/transform";
 @import "susy";
 @import "breakpoint";
 
@@ -172,6 +174,10 @@ a:link, a:visited {
   opacity:0.95;
   margin:auto;
   margin-bottom:1em;
+  @include transition(all 0.2s linear);
+  &:hover{
+    @include transform(rotate(-360deg));
+  }
 
 }
 
@@ -204,7 +210,7 @@ a:link, a:visited {
 
 
 
-#main-content {
+#main-content, #footer {
   padding:2em 2em 1em 2em;
   @include breakpoint($portraittab){
     padding:0;

@@ -1,14 +1,13 @@
 {
   "locals": {
     "url": "/",
-    "name": "Hi, I'm Peter",
+    "name": "Technology, design, and development - technoholic.ca",
     "owner": "Peter Szymczak",
-    "description": "I make the web for a living.",
+    "description": "One man's obsession with creating the interwebs.",
     "feedPath": "/feed.xml"
   },
   "plugins": [
     "./plugins/paginator.coffee",
-    "./plugins/home.coffee",
     "wintersmith-handlebars"
   ],
   "shared": {
@@ -19,16 +18,13 @@
     "_": "underscore",
     "typogr": "typogr"
   },
-  "jade": {
-    "pretty": true
-  },
   "markdown": {
     "smartLists": true,
     "smartypants": true
   },
   "paginator": {
-    "perPage": 3,
-    "template": "blog.hbs"
+    "perPage": 6,
+    "template": "home.hbs"
   },
   "ignore": [
     "**/.DS_Store"
