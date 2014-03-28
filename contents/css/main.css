@@ -161,10 +161,10 @@ a:link, a:visited {
   opacity: 0.95;
   margin: auto;
   margin-bottom: 1em;
-  -moz-transition: all 0.2s linear;
-  -o-transition: all 0.2s linear;
-  -webkit-transition: all 0.2s linear;
-  transition: all 0.2s linear;
+  -moz-transition: all 0.4s linear;
+  -o-transition: all 0.4s linear;
+  -webkit-transition: all 0.4s linear;
+  transition: all 0.4s linear;
 }
 .peter:hover {
   -moz-transform: rotate(-360deg);

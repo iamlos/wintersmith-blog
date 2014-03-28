@@ -23,4 +23,4 @@ function phptemplate_engine_preprocess_page(&$variables) {
 }
 ```
 
-Create a copy of page.tpl.php and rename it to page-YOURPATH.tpl.php and begin to make your own custom edits specific to that path. Now, if you've got a www.yoursite.com/blog path, then Drupal will pick up page-blog.tpl.php as the template for that page. The above code is for Drupal 6\. You may need to clear Drupal's cache after you've done this for it to take effect.
+Create a copy of page.tpl.php and rename it to page-YOURPATH.tpl.php and begin to make your own custom edits specific to that path. Now, if you've got a www.yoursite.com/blog path, then Drupal will pick up page-blog.tpl.php as the template for that page. The above code is for Drupal 6. You may need to clear Drupal's cache after you've done this for it to take effect.

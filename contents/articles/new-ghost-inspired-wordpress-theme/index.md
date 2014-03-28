@@ -3,6 +3,7 @@ title: New Ghost.js inspired WordPress theme
 author: peter
 date: Mon, 16 Dec 2013 00:39:04 GMT
 template: article.hbs
+comments: true
 ---
 
 Recently, I've been inspired by the Ghost blogging platform, which I think has a really clean and elegant default theme, so I built a WordPress theme that borrows from some of the ideas that I liked from that theme.
