@@ -8,11 +8,22 @@
     "type": "git",
     "url": "none"
   },
-  "name": "webforaliving",
-  "description": "Wintersmith blog with handlebars",
+  "name": "technoholic",
+  "description": "personal site of peter szymczak",
   "version": "0.0.1",
   "main": "index.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "grunt": "~0.4.4",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-contrib-compass": "~0.7.2",
+    "grunt-contrib-jshint": "~0.9.2",
+    "grunt-contrib-uglify": "~0.4.0",
+    "grunt-shell": "~0.6.4",
+    "grunt-wintersmith": "0.0.2"
+  },
+  "engines": {
+    "node": ">=0.10.24"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
