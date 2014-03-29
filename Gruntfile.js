@@ -3,6 +3,9 @@
 module.exports = function (grunt) {
 
   grunt.initConfig({
+    wintersmith: {
+      build: {}
+    },
     watch: {
       // options: {
       //   livereload: false
@@ -65,7 +68,7 @@ module.exports = function (grunt) {
           expand: true,
           cwd: 'contents/img',
           src: '**/*.{png,jpg,jpeg}',
-          dest: 'contents/img'
+          dest: 'build/img'
         }],
         options: {
           cache: false
@@ -122,13 +125,14 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-svg2png');
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
 
- // grunt.loadNpmTasks('grunt-wintersmith');
+  grunt.loadNpmTasks('grunt-wintersmith');
   //grunt.loadNpmTasks('grunt-concurrent');
 
   grunt.registerTask('build', [
-    'uglify',
     //'compass',
     'jshint',
+    'wintersmith',
+    'uglify',
     'imagemin',
     'svgmin',
     'svg2png',

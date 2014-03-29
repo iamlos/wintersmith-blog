@@ -58,7 +58,7 @@ require 'susy'
 
 # You can select your preferred output style here (:expanded, :nested, :compact
 # or :compressed).
-output_style = (environment == :development) ? :expanded : :nested
+output_style = (environment == :development) ? :nested : :compressed
 
 # To enable relative paths to assets via compass helper functions. Since Drupal
 # themes can be installed in multiple locations, we don't need to worry about

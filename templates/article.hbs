@@ -5,7 +5,7 @@
 	<main id="main-content" class="post">
 		<article class="container box">
 			<header>
-				<h2><a href="{{page.url}}">{{page.title}}</a></h2>
+				<h2>{{page.title}}</h2>
 				<p class="date"><span>{{date page.metadata.date}}</span></p>
 			</header>
 			<section class="content">
@@ -25,19 +25,5 @@
 			</header>
 		</article>
 
-		<footer>
-			<nav class="nav">
-				{{#if prevPage}}
-					<div class="newer">
-						<a href="{{prevPage.url}}">Newer » </a>
-					</div>
-				{{/if}}
-				{{#if nextPage}}
-					<div class="older">
-						<a href="{{nextPage.url}}"> « Older</a>
-					</div>
-				{{/if}}
-			</nav>
-		</footer>
 	</main>
 	{{> footer}}
