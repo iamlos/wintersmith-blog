@@ -86,33 +86,29 @@ module.exports = function (grunt) {
 
     svg2png: {
       dev: {
-        // specify files in array format with multiple src-dest mapping
         files: [
-          // rasterize all SVG files in "img" and its subdirectories to "img/png"
           { src: [ 'build/img/**/*.svg'], dest: 'build/img/png/' }
-          // rasterize SVG file to same directory
-          // { src: ['media/logo.svg'] }
         ]
       },
       dist: {
         files: [
-          // rasterize all SVG files in "img" and its subdirectories to "img/png"
           { src: [ 'build/img/**/*.svg'], dest: 'build/img/png/' }
-          // rasterize SVG file to same directory
-          // { src: ['media/logo.svg'] }
         ]
       }
     },
 
-    htmlmin: {                                     // Task
-        dist: {                                      // Target
-          options: {                                 // Target options
+    htmlmin: {
+        dist: {
+          options: {
             removeComments: true,
             collapseWhitespace: true
           },
-          files: {                                   // Dictionary of files
-            'build/index.html': 'build/index.html'     // 'destination': 'source'
-          }
+          files: [{
+            expand: true,
+            cwd: 'build',
+            src: ['**/*.html'],
+            dest: 'build'
+          }]
         }
       }
     });
