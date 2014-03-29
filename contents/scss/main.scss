@@ -177,7 +177,7 @@ a:link, a:visited {
   margin-bottom:1em;
   @include transition(all 0.7s linear);
   &:hover{
-    @include transform(rotate(-360deg));
+
   }
 
 }

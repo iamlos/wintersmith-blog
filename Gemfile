@@ -5,7 +5,7 @@ group :development do
   # Sass, Compass and extensions.
   gem 'sass'                    # Sass.
   #gem 'sass-globbing'           # Import Sass files based on globbing pattern.
-  gem 'compass'                 # Framework built on Sass.
+ # gem 'compass'                 # Framework built on Sass.
   gem 'compass-validator'       # So you can `compass validate`.
   #gem 'compass-normalize'       # Compass version of normalize.css.
   #gem 'compass-rgbapng'         # Turns rgba() into .png's for backwards compatibility.
@@ -15,6 +15,6 @@ group :development do
   gem 'breakpoint'              # Manages CSS media queries.
   gem 'oily_png'                # Faster Compass sprite generation.
   gem 'css_parser'              # Helps `compass stats` output statistics.
-
+gem 'compass', '~> 1.0.0.alpha.19'
 
 end

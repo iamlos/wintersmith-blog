@@ -73,3 +73,5 @@ sass_options = (environment == :development) ? {} : {:debug_info => true}
 
 # Add the 'sass' directory itself as an import path to ease imports.
 add_import_path 'sass'
+
+sass_options = {:sourcemap => true}
