@@ -3,10 +3,12 @@
 	var App = {
 		Modules: {},
 		init: function () {
- 			// here we are looping round all of the modules in our app.Modules object. We could have an exclude array for modules
+			// here we are looping round all of the modules in our app.Modules object. We could have an exclude array for modules
       // that we don't want to be immediately initialised. We could initialise them later on in our application lifecycle
       for(var x in App.Modules) {
-        App.Modules[x].init();
+				if (App.Modules.hasOwnProperty(x)) {
+					App.Modules[x].init();
+        }
       }
 		}
 	};

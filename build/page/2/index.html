@@ -43,6 +43,31 @@
       
       <article>
         <header>
+          <h2><a href="/articles/drupal-6-page-tpl-php-template-based-on-path/">Drupal 6 page.tpl.php template based on path</a></h2>
+        </header>
+        <section class="summary">
+          <p>Use custom page.tpl.php files based on the <span class="caps">URL</span> path alias of your pages to create custom template files. Add the following code to your theme’s template.php&nbsp;file.</p>
+<pre><code class="lang-php"><span class="function"><span class="keyword">function</span> <span class="title">phptemplate_engine_preprocess_page</span><span class="params">(&amp;<span class="variable">$variables</span>)</span> {</span>
+  <span class="variable">$alias</span> = drupal_get_path_alias(<span class="variable">$_GET</span>[<span class="string">'q'</span>]);
+
+  <span class="keyword">if</span> (<span class="variable">$alias</span> != <span class="variable">$_GET</span>[<span class="string">'q'</span>]) {
+    <span class="variable">$template_filename</span> = <span class="string">'page'</span>;
+
+    <span class="keyword">foreach</span> (explode(<span class="string">'/'</span>, <span class="variable">$alias</span>) <span class="keyword">as</span> <span class="variable">$path_part</span>) {
+      <span class="variable">$template_filename</span> = <span class="variable">$template_filename</span> . <span class="string">'-'</span> . <span class="variable">$path_part</span>;
+      <span class="variable">$variables</span>[<span class="string">'template_files'</span>][] = <span class="variable">$template_filename</span>;
+    }
+  }
+}
+</code></pre>
+<p>Create a copy of page.tpl.php and rename it to page-<span class="caps">YOURPATH</span>.tpl.php and begin to make your own custom edits specific to that path. Now, if you’ve got a www.yoursite.com/blog path, then Drupal will pick up page-blog.tpl.php as the template for that page. The above code is for Drupal 6. You may need to clear Drupal’s cache after you’ve done this for it to take&nbsp;effect.</p>
+
+          
+        </section>
+      </article>
+      
+      <article>
+        <header>
           <h2><a href="/articles/jquery-shine-animation-effect/">jQuery Shine animation effect</a></h2>
         </header>
         <section class="summary">
@@ -74,19 +99,6 @@
 
           
             <p class="more"><a href="/articles/quality-iphone-and-ipod-touch-wallpapers-poolga/">Continue reading &rarr;</a></p>
-          
-        </section>
-      </article>
-      
-      <article>
-        <header>
-          <h2><a href="/articles/best-image-viewer-for-mac-xee/">Best Image Viewer for Mac Xee</a></h2>
-        </header>
-        <section class="summary">
-          <p>When I used Windows, I used to use a program called ACDSee to scroll through large amounts of images within folders. It was a great way to quickly go through any type of images within a folder. This was also very useful because I tend to keep a lot of PSDs of web designs with various version of a design, so ACDSee made it really easy to scroll through and compare them. When I switched to Mac, I couldn’t do this as easily anymore. I went on a hunt to find the best image viewer for Mac, and found a great open source solution in a program called <a href="http://wakaba.c3.cx/s/apps/xee.html">Xee</a>. Xee is light weight, simple, and does everything the old ACDSee did for me. I highly recommend downloading this&nbsp;one.
-
-          
-            <p class="more"><a href="/articles/best-image-viewer-for-mac-xee/">Continue reading &rarr;</a></p>
           
         </section>
       </article>

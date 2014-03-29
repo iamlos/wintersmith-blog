@@ -117,12 +117,13 @@ a:link, a:visited {
 #sidebar {
   font-size: 1.15em;
   text-align: left;
-  background-color: #05b2c6;
+  background: #05b2c6 url(../img/bg.jpg);
   padding: 2em 2em 1em 2em;
 }
 @media (min-width: 768px) {
   #sidebar {
-    width: 346px;
+    width: 356px;
+    border-right: 10px solid rgba(0, 0, 0, 0.1);
     padding: 3em 3em 1em 3em;
     position: fixed;
     left: 0;
@@ -161,10 +162,10 @@ a:link, a:visited {
   opacity: 0.95;
   margin: auto;
   margin-bottom: 1em;
-  -moz-transition: all 0.4s linear;
-  -o-transition: all 0.4s linear;
-  -webkit-transition: all 0.4s linear;
-  transition: all 0.4s linear;
+  -moz-transition: all 0.7s linear;
+  -o-transition: all 0.7s linear;
+  -webkit-transition: all 0.7s linear;
+  transition: all 0.7s linear;
 }
 .peter:hover {
   -moz-transform: rotate(-360deg);
