@@ -4,7 +4,12 @@ module.exports = function (grunt) {
 
   grunt.initConfig({
     wintersmith: {
-      build: {}
+      build: {},
+      preview: {
+        options: {
+          action: "preview"
+        }
+      }
     },
     watch: {
       // options: {
@@ -129,7 +134,7 @@ module.exports = function (grunt) {
   //grunt.loadNpmTasks('grunt-concurrent');
 
   grunt.registerTask('build', [
-    //'compass',
+    'compass',
     'jshint',
     'wintersmith',
     'uglify',
@@ -143,7 +148,8 @@ module.exports = function (grunt) {
   grunt.registerTask('default', [
     'watch',
     'uglify:dist',
-    'jshint:dist'
+    'jshint:dist',
+
 
   ]);
 

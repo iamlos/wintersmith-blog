@@ -184,7 +184,9 @@ a:link, a:visited {
 
 .container, #footer {
   @include breakpoint($portraittab){
+    padding-left:3em;
     padding-right:3em;
+    max-width:800px;
   }
 }
 
@@ -216,7 +218,7 @@ a:link, a:visited {
   @include breakpoint($portraittab){
     padding:0;
     margin-top:3em;
-    margin-left:400px;
+    margin-left:356px;
   }
 }
 
