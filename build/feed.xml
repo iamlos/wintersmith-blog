@@ -12,17 +12,6 @@
     
     
     <item>
-      <title>100 Really Good Quality iPhone and iPod Touch Wallpapers</title>
-      <link>//articles/100-really-good-quality-iphone-and-ipod-touch-wallpapers/</link>
-      <pubDate>Tue, 06 Jan 2009 14:52:30 -0800</pubDate>
-      <guid isPermaLink="true">//articles/100-really-good-quality-iphone-and-ipod-touch-wallpapers/</guid>
-      <author>peter</author>
-      <description>In my last post, I wrote about Poolgo, a great little site with really good iPhone wallpapers. These are quality wallpapers made by real designers. Well, today I happened upon a Smashing Magazine article with 100 really sweet iPhone wallpapers, which includes Poolgo in its list, but also includes way more other wallpapers. I just had to post and update with a link to this Smashing Magazine article, because it really goes way above and beyond what I wrote.
-If you’re looking for some great iPhone or iPod Touch wallpapers, you need to read this article.
-</description>
-    </item>
-    
-    <item>
       <title>Best Image Viewer for Mac Xee</title>
       <link>//articles/best-image-viewer-for-mac-xee/</link>
       <pubDate>Sat, 20 Dec 2008 14:44:46 -0800</pubDate>
@@ -39,6 +28,17 @@ If you’re looking for some great iPhone or iPod Touch wallpapers, you need to 
       <guid isPermaLink="true">//articles/code-changes-not-displaying-after-refresh/</guid>
       <author>peter</author>
       <description>After weeks of frustration, I finally figured out why my PHP code changes on my local development box weren’t always coming up in the browser after several refreshes. As it turns out, it’s a new OPCache setting as of PHP 5.5 that comes with MAMP.
+</description>
+    </item>
+    
+    <item>
+      <title>100 Really Good Quality iPhone and iPod Touch Wallpapers</title>
+      <link>//articles/100-really-good-quality-iphone-and-ipod-touch-wallpapers/</link>
+      <pubDate>Tue, 06 Jan 2009 14:52:30 -0800</pubDate>
+      <guid isPermaLink="true">//articles/100-really-good-quality-iphone-and-ipod-touch-wallpapers/</guid>
+      <author>peter</author>
+      <description>In my last post, I wrote about Poolgo, a great little site with really good iPhone wallpapers. These are quality wallpapers made by real designers. Well, today I happened upon a Smashing Magazine article with 100 really sweet iPhone wallpapers, which includes Poolgo in its list, but also includes way more other wallpapers. I just had to post and update with a link to this Smashing Magazine article, because it really goes way above and beyond what I wrote.
+If you’re looking for some great iPhone or iPod Touch wallpapers, you need to read this article.
 </description>
     </item>
     

@@ -129,7 +129,7 @@ module.exports = function (grunt) {
   //grunt.loadNpmTasks('grunt-concurrent');
 
   grunt.registerTask('build', [
-    //'compass',
+    'compass',
     'jshint',
     'wintersmith',
     'uglify',
