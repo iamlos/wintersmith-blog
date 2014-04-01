@@ -7,7 +7,7 @@ module.exports = function (grunt) {
       build: {},
       preview: {
         options: {
-          action: "preview"
+          action: 'preview'
         }
       }
     },
@@ -29,6 +29,10 @@ module.exports = function (grunt) {
         files: ['contents/js/{,**/}*.js', '!contents/js/{,**/}*.min.js'],
         tasks: ['jshint', 'uglify:dist']
       }
+    },
+
+    concurrent: {
+        preview: ['compass', 'wintersmith:preview']
     },
 
     compass: {
@@ -131,12 +135,12 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
 
   grunt.loadNpmTasks('grunt-wintersmith');
-  //grunt.loadNpmTasks('grunt-concurrent');
+  grunt.loadNpmTasks('grunt-concurrent');
 
   grunt.registerTask('build', [
     'compass',
     'jshint',
-    'wintersmith',
+    'wintersmith:build',
     'uglify',
     'imagemin',
     'svgmin',
@@ -147,10 +151,11 @@ module.exports = function (grunt) {
 
   grunt.registerTask('default', [
     'watch',
+    'wintersmith:build',
     'uglify:dist',
-    'jshint:dist',
-
-
+    'jshint:dist'
   ]);
+
+  grunt.registerTask('preview', ['concurrent:preview']);
 
 };
