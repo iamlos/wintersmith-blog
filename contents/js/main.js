@@ -16,22 +16,72 @@
   window.App = App;
 
 
-	// App.Modules.verticalcenterContainer = {
-	// 		windowHeight: $(window).height(),
-	// 		containerHeight: $('.container').height(),
-	// 		setMargin: function(){
-	// 			var obj = this;
-	// 			var topMargin = ( obj.windowHeight - obj.containerHeight ) / 2;
-	// 			$('.container').css('margin-top', topMargin);
-	// 		},
-	// 		init: function(){
-	// 			this.setMargin();
+	App.Modules.navigation = {
+			init: function(){
+				this.rememberState();
+				this.events();
+			},
+			openMenu: function(){
+				var body = $('body');
+				localStorage.setItem('navState', 'open');
 
-	// 			//THIS ISN'T WORKING!
-	// 			var lazyLayout = _.debounce(this.setMargin, 300);
-	// 			$(window).resize(lazyLayout);
-	// 		}
-	// };
+				body.addClass('transition').removeClass('closed').removeClass('showicons').addClass('open');
+
+
+				setTimeout(function(){
+					body.removeClass('hide-content');
+				},400);
+			},
+			closeMenu: function(){
+				var body = $('body');
+				localStorage.setItem('navState', 'closed');
+
+				body.addClass('transition').addClass('hide-content');
+
+				setTimeout(function(){
+					body.removeClass('open').addClass('closed');
+
+					setTimeout(function(){
+						body.addClass('showicons');
+					},500);
+
+				},400);
+
+			},
+			rememberState: function(){
+				if (Modernizr.localstorage) {
+					var navState = localStorage.getItem('navState');
+					var body = $('body');
+
+					if (navState === null){
+						localStorage.setItem('navState', 'open');
+					}
+
+					if (navState === 'open'){
+						body.removeClass('closed').removeClass('showicons').addClass('open').removeClass('hide-content');
+
+					}
+					else if(navState === 'closed'){
+						body.addClass('hide-content').removeClass('open').addClass('closed').addClass('showicons');
+					}
+
+
+				}
+			},
+			events: function(){
+				var that = this;
+				$(document).on('click', '.open .activate', function(event) {
+					event.preventDefault();
+					that.closeMenu();
+				});
+
+				$(document).on('click', '.closed .activate', function(event) {
+					event.preventDefault();
+					that.openMenu();
+				});
+
+			}
+		};
 
 
 

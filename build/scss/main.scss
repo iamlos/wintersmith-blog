@@ -7,6 +7,8 @@
 $portraittab: 768px;
 $tab: 1024px;
 
+$menuanimate: all 0.4s cubic-bezier(0.75, 0.25, 0.25, 0.75);
+
 /*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
 
 /*
@@ -131,6 +133,9 @@ a:link, a:visited {
   text-decoration: none;
 }
 
+/**
+ * SIDEBAR STUFF
+ */
 
 #sidebar {
   font-size:1.15em;
@@ -146,6 +151,50 @@ a:link, a:visited {
     top:0;
     bottom:0;
     height:100%;
+  }
+}
+.transition #sidebar{
+  @include transition($menuanimate);
+
+  img, h2, p, .social {
+    @include transition(all 0.2s linear);
+  }
+}
+
+.closed #sidebar {
+  @include breakpoint($portraittab){
+    width:70px;
+    padding:3em 0 1em 0;
+    overflow:hidden;
+  }
+}
+
+.hide-content #sidebar {
+  @include breakpoint($portraittab){
+    img, h2, p, .social {
+      opacity:0;
+    }
+  }
+}
+
+#sidebar .activate {
+  @include breakpoint($portraittab){
+    position: absolute;
+    bottom: .4em;
+    right: 0.53em;
+    font-size: 2em;
+    color: rgba(0,0,0,0.5);
+  }
+}
+
+.transition #sidebar .activate {
+  @include transition(all 0.2s linear);
+}
+
+.closed #sidebar .activate {
+  @include breakpoint($portraittab){
+    @include transform(rotate(-180deg));
+
   }
 }
 
@@ -177,12 +226,43 @@ a:link, a:visited {
   opacity:0.95;
   margin:auto;
   margin-bottom:1em;
-  @include transition(all 0.7s linear);
+
   &:hover{
 
   }
-
 }
+.transition .peter {
+  @include transition(all 0.7s linear);
+}
+
+.hide-content.showicons #sidebar .social {
+  @include breakpoint($portraittab){
+    position: absolute;
+    bottom: 83px;
+    left: 26px;
+    text-align: center;
+    opacity: 1;
+
+  }
+
+  li {
+    @include breakpoint($portraittab){
+      display: block;
+      margin: 0;
+      font-size: 1.1em;
+      margin-bottom: 0.75em;
+    }
+  }
+}
+
+.transition.hide-content.showicons #sidebar .social {
+  @include transition(all 0.7s linear);
+}
+
+
+/**
+ * MAIN CONTAINER
+ */
 
 .container, #footer .copyright {
   @include breakpoint($portraittab){
@@ -225,6 +305,17 @@ a:link, a:visited {
     padding:0;
     margin-top:3em;
     margin-left:356px;
+
+  }
+}
+
+.transition #main-content, .transition #footer {
+  @include transition($menuanimate);
+}
+
+.closed #main-content, .closed #footer {
+  @include breakpoint($portraittab){
+    margin-left:70px;
   }
 }
 

@@ -2,6 +2,8 @@
 
 module.exports = function (grunt) {
 
+  require('time-grunt')(grunt);
+
   grunt.initConfig({
     wintersmith: {
       build: {},
@@ -133,7 +135,6 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-svgmin');
   grunt.loadNpmTasks('grunt-svg2png');
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
-
   grunt.loadNpmTasks('grunt-wintersmith');
   grunt.loadNpmTasks('grunt-concurrent');
 
@@ -144,7 +145,7 @@ module.exports = function (grunt) {
     'uglify',
     'imagemin',
     'svgmin',
-    'svg2png',
+    'svg2png:dist',
     'htmlmin'
   ]);
 
