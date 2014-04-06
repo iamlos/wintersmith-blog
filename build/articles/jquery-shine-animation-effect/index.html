@@ -1,15 +1,119 @@
-<!DOCTYPE html><html lang="en"><head><title>jQuery Shine animation effect | Technology, design, and development - technoholic.ca</title><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui"><meta name="description" content="I’ve been diving deeper into jQuery lately, because a few clients have been requesting Flash-like functionality for their websites, and I’ve been avoiding Flash since before Steve Jobs made it cool to do so. I have to say, there is more and more that jQuery can do that Flash used to only do. I recently came across one great example of this while researching button effects for a personal project (release coming soon). Addy from AddyOsmani.com posted this great article about a shine effect using jQuery called &amp;quot;ShineTime – A Kick-Ass New jQuery &amp;amp;amp; CSS3 Gallery With Animated Shine Effects.&amp;quot; The best part of the effect is that it’s so simple to implement and if you’re at all comfortable with jQuery and CSS, the method used with background-position opens up a world of possibility with other effects other than shine, which at least I wasn’t aware of. Check out his demo to see the effect in action.
+	<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>jQuery Shine animation effect | Technology, design, and development - technoholic.ca</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui" />
+    <meta name="description" content="I’ve been diving deeper into jQuery lately, because a few clients have been requesting Flash-like functionality for their websites, and I’ve been avoiding Flash since before Steve Jobs made it cool to do so. I have to say, there is more and more that jQuery can do that Flash used to only do. I recently came across one great example of this while researching button effects for a personal project (release coming soon). Addy from AddyOsmani.com posted this great article about a shine effect using jQuery called &amp;quot;ShineTime – A Kick-Ass New jQuery &amp;amp;amp; CSS3 Gallery With Animated Shine Effects.&amp;quot; The best part of the effect is that it’s so simple to implement and if you’re at all comfortable with jQuery and CSS, the method used with background-position opens up a world of possibility with other effects other than shine, which at least I wasn’t aware of. Check out his demo to see the effect in action.
 The entire thing really boils down to a few lines of jQuery Javascript code and some CSS. When a event happens, such as a hover or a page load, a shine PNG image is changed from a background position of off the screen to one that crosses to the other side off the screen. With a little modification, I made the effect display a few seconds after the page loads using setTimeout, rather than when you hover over an element, which produced a great little embellishment for a button or a logo when a visitors comes to the site. It’s a great little effect that you used to only be able to do with Flash.
-"><meta name="keywords" content=""><link rel="alternate" href="//feed.xml" type="application/rss+xml" title="Technology, design, and development - technoholic.ca"><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css"><link rel="stylesheet" href="/css/main.css"><link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet"><script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js"></script><script type="text/javascript" src="//use.typekit.net/ewy6xec.js"></script><script type="text/javascript">try{Typekit.load();}catch(e){}</script></head><body><!--[if lt IE 7]><p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p><![endif]--><aside id="sidebar"><a href="/"><img src="/img/peter.jpg" alt="Peter Szymczak" class="peter"></a><h2>Hi, I'm Peter</h2><p>I'm a front-end web developer based in Vancouver, BC. I'm passionate about great design and building innovative interactive web experiences.</p><p><ul class="social"><li><a href="http://twitter.com/petethedude" target="_blank"><i class="fa fa-twitter"></i></a></li><li><a href="http://instagram.com/petethedude" target="_blank"><i class="fa fa-instagram"></i></a></li><li><a href="http://ca.linkedin.com/pub/peter-szymczak/9/906/35a" target="_blank"><i class="fa fa-linkedin"></i></a></li><li><a href="http://www.github.com/petethedude" target="_blank"><i class="fa fa-github"></i></a></li><li><a href="mailto:peter@defiant.io" target="_blank"><i class="fa fa-envelope"></i></a></li></ul></p><div class="activate"><i class="fa fa-chevron-circle-left"></i></div></aside><main id="main-content" class="post"><article class="container box"><header><h2>jQuery Shine animation effect</h2><p class="date"><span>November 13, 2010</span></p></header><section class="content"><p>I’ve been diving deeper into jQuery lately, because a few clients have been requesting Flash-like functionality for their websites, and I’ve been avoiding Flash since before Steve Jobs made it cool to do so. I have to say, there is more and more that jQuery can do that Flash used to only do. I recently came across one great example of this while researching button effects for a personal project (release coming soon). Addy from AddyOsmani.com posted this great article about a shine effect using jQuery called <a href="http://addyosmani.com/blog/shinetime/">&quot;ShineTime – A Kick-Ass New jQuery &amp;amp; <span class="caps">CSS3</span> Gallery With Animated Shine Effects.&quot;</a> The best part of the effect is that it’s so simple to implement and if you’re at all comfortable with jQuery and <span class="caps">CSS</span>, the method used with background-position opens up a world of possibility with other effects other than shine, which at least I wasn’t aware of. Check out <a href="http://www.addyosmani.com/resources/shinetime">his demo</a> to see the effect in&nbsp;action.</p><p>The entire thing really boils down to a few lines of jQuery Javascript code and some <span class="caps">CSS</span>. When a event happens, such as a hover or a page load, a shine PNG image is changed from a background position of off the screen to one that crosses to the other side off the screen. With a little modification, I made the effect display a few seconds after the page loads using setTimeout, rather than when you hover over an element, which produced a great little embellishment for a button or a logo when a visitors comes to the site. It’s a great little effect that you used to only be able to do with&nbsp;Flash.</p></section><footer><div id="disqus_thread"></div><script type="text/javascript">var disqus_shortname = 'technoholicca';
+">
+    <meta name="keywords" content="">
+    <link rel="alternate" href="//feed.xml" type="application/rss+xml" title="Technology, design, and development - technoholic.ca">
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js"></script>
+    <script type="text/javascript" src="//use.typekit.net/ewy6xec.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+</head>
+  <body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+
+	<aside id="sidebar">
+  <a href="/"><img src="/img/peter.jpg" alt="Peter Szymczak" class="peter" /></a>
+
+  <h2>Hi, I'm Peter</h2>
+  <p>I'm a full-stack web developer based in Vancouver, BC. I'm passionate about great design and building simple solutions to complex problems.</p>
+  <p>
+    <ul class="social">
+      <li><a href="http://twitter.com/petethedude" target="_blank"><i class="fa fa-twitter"></i></a></li>
+      <li><a href="http://instagram.com/petethedude" target="_blank"><i class="fa fa-instagram"></i></a></li>
+      <li><a href="http://ca.linkedin.com/pub/peter-szymczak/9/906/35a" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+      <li><a href="http://www.github.com/petethedude" target="_blank"><i class="fa fa-github"></i></a></li>
+      <li><a href="mailto:peter@defiant.io" target="_blank"><i class="fa fa-envelope"></i></a></li>
+    </ul>
+  </p>
+  <div class="activate"><i class="fa fa-chevron-circle-left"></i></div>
+</aside>
+
+	<main id="main-content" class="post">
+
+		  <header id="header">
+    <h1><a href="/">technoholic.ca</a></h1>
+  </header>
+
+		<article class="container box">
+			<header>
+				<h2>jQuery Shine animation effect</h2>
+				<p class="date"><span>November 13, 2010</span></p>
+			</header>
+			<section class="content">
+				<p>I’ve been diving deeper into jQuery lately, because a few clients have been requesting Flash-like functionality for their websites, and I’ve been avoiding Flash since before Steve Jobs made it cool to do so. I have to say, there is more and more that jQuery can do that Flash used to only do. I recently came across one great example of this while researching button effects for a personal project (release coming soon). Addy from AddyOsmani.com posted this great article about a shine effect using jQuery called <a href="http://addyosmani.com/blog/shinetime/">&quot;ShineTime – A Kick-Ass New jQuery &amp;amp; <span class="caps">CSS3</span> Gallery With Animated Shine Effects.&quot;</a> The best part of the effect is that it’s so simple to implement and if you’re at all comfortable with jQuery and <span class="caps">CSS</span>, the method used with background-position opens up a world of possibility with other effects other than shine, which at least I wasn’t aware of. Check out <a href="http://www.addyosmani.com/resources/shinetime">his demo</a> to see the effect in&nbsp;action.</p>
+<p>The entire thing really boils down to a few lines of jQuery Javascript code and some <span class="caps">CSS</span>. When a event happens, such as a hover or a page load, a shine PNG image is changed from a background position of off the screen to one that crosses to the other side off the screen. With a little modification, I made the effect display a few seconds after the page loads using setTimeout, rather than when you hover over an element, which produced a great little embellishment for a button or a logo when a visitors comes to the site. It’s a great little effect that you used to only be able to do with&nbsp;Flash.</p>
+
+			</section>
+
+			
+				<footer>
+<div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'technoholicca';
 
 
         (function() {
             var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
             dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();</script><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></footer></article><article class="container box"><header><h2><a href="/">&larr; Return to Home</a></h2></header></article></main><footer id="footer"><section class="copyright"><ul class="menu"><li>© 2014 Peter Szymczak. All rights reserved.</li><li>Generated with <a href="http://wintersmith.io/">Wintersmith</a></li></ul></section></footer><script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script><script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.10.2.min.js"><\/script>')</script><script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script><script src="/js/main.js"></script><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        })();
+    </script>
+    <noscript>
+      Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+    </noscript>
+</footer>
+
+
+			
+
+		</article>
+
+		<!-- Back to Blog Box -->
+		<article class="container box">
+			<header>
+				<h2><a href="/">&larr; Return to Home</a></h2>
+			</header>
+		</article>
+
+	</main>
+	<footer id="footer">
+  <section class="copyright">
+    <ul class="menu">
+      <li>© 2014 Peter Szymczak. All rights reserved.</li>
+      <li>Generated with <a href="http://wintersmith.io/">Wintersmith</a></li>
+    </ul>
+  </section>
+</footer>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script>
+    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
     function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
     e=o.createElement(i);r=o.getElementsByTagName(i)[0];
     e.src='//www.google-analytics.com/analytics.js';
     r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-    ga('create','UA-2081694-2');ga('send','pageview');</script></body></html>
+    ga('create','UA-2081694-2');ga('send','pageview');
+</script>
+
+</body>
+</html>

@@ -65,10 +65,10 @@ module.exports = function (grunt) {
         },
         files: [{
           expand: true,
-          cwd: 'js',
+          cwd: 'build/js',
           src: ['**/*.js', '!**/*.min.js'],
-          dest: 'js',
-          ext: '.min.js'
+          dest: 'build/js',
+          ext: '.js'
         }]
       }
     },
@@ -124,7 +124,48 @@ module.exports = function (grunt) {
             dest: 'build'
           }]
         }
+      },
+
+      hashres: {
+        options: {
+          encoding: 'utf8',
+          fileNameFormat: '${name}.${hash}.cache.${ext}',
+          renameFiles: true
+        },
+        css: {
+          options: {
+          },
+          src: 'build/**/*.css',
+          dest: 'build/**/*.html'
+        },
+        js: {
+          options: {
+          },
+          src: 'build/**/*.js',
+          dest: 'build/**/*.html'
+        },
+        images: {
+          options: {
+          },
+          src: [
+            'build/**/*.png',
+            'build/**/*.jpg'
+          ],
+          dest: [
+            'build/**/*.html',
+            'build/**/*.js',
+            'build/**/*.css',
+            'build/**/*.md'
+          ]
+        }
+      },
+
+      clean: {
+        build: {
+          src: [ 'build' ]
+        },
       }
+
     });
 
   grunt.loadNpmTasks('grunt-contrib-watch');
@@ -137,15 +178,20 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
   grunt.loadNpmTasks('grunt-wintersmith');
   grunt.loadNpmTasks('grunt-concurrent');
+  grunt.loadNpmTasks('grunt-hashres');
+  grunt.loadNpmTasks('grunt-contrib-clean');
+
 
   grunt.registerTask('build', [
     'compass',
     'jshint',
+    'clean',
     'wintersmith:build',
     'uglify',
     'imagemin',
     'svgmin',
     'svg2png:dist',
+    'hashres',
     'htmlmin'
   ]);
 

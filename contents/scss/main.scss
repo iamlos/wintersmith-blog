@@ -178,12 +178,16 @@ a:link, a:visited {
 }
 
 #sidebar .activate {
+  display:none;
   @include breakpoint($portraittab){
+    display:block;
+    cursor:pointer;
     position: absolute;
     bottom: .4em;
     right: 0.53em;
     font-size: 2em;
     color: rgba(0,0,0,0.5);
+    z-index:3;
   }
 }
 
@@ -264,7 +268,7 @@ a:link, a:visited {
  * MAIN CONTAINER
  */
 
-.container, #footer .copyright {
+#header, .container, #footer .copyright {
   @include breakpoint($portraittab){
     padding-left:3em;
     padding-right:3em;
@@ -273,6 +277,21 @@ a:link, a:visited {
   }
   @include breakpoint($tab){
     max-width:800px;
+  }
+}
+
+#header {
+  font-size:1.25em;
+  margin-bottom:3em;
+  h1 {
+    font-size:1em;
+    opacity:0.6;
+    padding-bottom:0.5em;
+    border-bottom:1px solid #555;
+    @include transition(opacity 0.3s linear);
+    &:hover {
+      opacity:1;
+    }
   }
 }
 
@@ -285,11 +304,11 @@ a:link, a:visited {
 .container h2 {
   font-size:2em;
   @include breakpoint($portraittab){
-    font-size:2.4em;
+    font-size:2.2em;
   }
   line-height:1em;
   font-family: "proxima-nova-condensed",sans-serif;
-  margin:15px 0 15px -6px;
+  margin:15px 0;
   text-transform: uppercase;
 }
 .container p {
@@ -341,8 +360,18 @@ article .summary a:hover, article .content a:hover {
 }
 
 article .summary .more a{
-  color:#fff;
-  border-bottom:0;
+  border: 1px solid rgba(255,255,255,0.3);
+  padding: 0.25em 1em;
+  display: inline-block;
+  font-size: 0.7em;
+  text-transform: uppercase;
+  font-weight: bold;
+  @include transition(all 0.2s linear);
+  &:hover {
+    border: 1px solid rgba(255,255,255,0.3);
+    background: rgba(255,255,255,0.8);
+    color:#444;
+  }
 }
 
 article p.date {

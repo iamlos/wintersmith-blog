@@ -3,6 +3,9 @@
   {{> sidebar}}
 
   <main id="main-content" class="home">
+
+   {{> branding}}
+
    <section class="container box">
       {{#each articles}}
       <article>
@@ -13,7 +16,7 @@
         <section class="summary">
           {{{typogr intro}}}
           {{#if hasMore}}
-            <p class="more"><a href="{{url}}">Continue reading &rarr;</a></p>
+            <p class="more"><a href="{{url}}">Read more</a></p>
           {{/if}}
         </section>
       </article>
