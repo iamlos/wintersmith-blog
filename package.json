@@ -27,7 +27,8 @@
     "grunt-concurrent": "~0.5.0",
     "time-grunt": "~0.3.1",
     "grunt-hashres": "~0.4.1",
-    "grunt-contrib-clean": "~0.5.0"
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-build-control": "~0.1.2"
   },
   "engines": {
     "node": ">=0.10.24"

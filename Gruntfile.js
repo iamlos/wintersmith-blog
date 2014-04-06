@@ -2,6 +2,9 @@
 
 module.exports = function (grunt) {
 
+  // Project configuration.
+  var pkg = require('./package.json');
+
   require('time-grunt')(grunt);
 
   grunt.initConfig({
@@ -124,46 +127,60 @@ module.exports = function (grunt) {
             dest: 'build'
           }]
         }
-      },
+    },
 
-      hashres: {
+    hashres: {
+      options: {
+        encoding: 'utf8',
+        fileNameFormat: '${name}.${hash}.cache.${ext}',
+        renameFiles: true
+      },
+      css: {
         options: {
-          encoding: 'utf8',
-          fileNameFormat: '${name}.${hash}.cache.${ext}',
-          renameFiles: true
         },
-        css: {
-          options: {
-          },
-          src: 'build/**/*.css',
-          dest: 'build/**/*.html'
-        },
-        js: {
-          options: {
-          },
-          src: 'build/**/*.js',
-          dest: 'build/**/*.html'
-        },
-        images: {
-          options: {
-          },
-          src: [
-            'build/**/*.png',
-            'build/**/*.jpg'
-          ],
-          dest: [
-            'build/**/*.html',
-            'build/**/*.js',
-            'build/**/*.css',
-            'build/**/*.md'
-          ]
-        }
+        src: 'build/**/*.css',
+        dest: 'build/**/*.html'
       },
-
-      clean: {
-        build: {
-          src: [ 'build' ]
+      js: {
+        options: {
         },
+        src: 'build/**/*.js',
+        dest: 'build/**/*.html'
+      },
+      images: {
+        options: {
+        },
+        src: [
+          'build/**/*.png',
+          'build/**/*.jpg'
+        ],
+        dest: [
+          'build/**/*.html',
+          'build/**/*.js',
+          'build/**/*.css',
+          'build/**/*.md'
+        ]
+      }
+    },
+
+    clean: {
+      build: {
+        src: [ 'build' ]
+      },
+    },
+    buildcontrol: {
+        options: {
+          dir: 'build',
+          commit: true,
+          push: true,
+          message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
+        },
+        prod: {
+          options: {
+            remote: 'git@github.com:petethedude/wintersmith-blog.git',
+            branch: 'prod'
+          }
+        }
       }
 
     });
@@ -180,6 +197,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-concurrent');
   grunt.loadNpmTasks('grunt-hashres');
   grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-build-control');
 
 
   grunt.registerTask('build', [
@@ -192,7 +210,8 @@ module.exports = function (grunt) {
     'svgmin',
     'svg2png:dist',
     'hashres',
-    'htmlmin'
+    'htmlmin',
+    'buildcontrol:prod'
   ]);
 
 
