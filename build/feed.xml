@@ -12,6 +12,27 @@
     
     
     <item>
+      <title>100 Really Good Quality iPhone and iPod Touch Wallpapers</title>
+      <link>//articles/100-really-good-quality-iphone-and-ipod-touch-wallpapers/</link>
+      <pubDate>Tue, 06 Jan 2009 14:52:30 -0800</pubDate>
+      <guid isPermaLink="true">//articles/100-really-good-quality-iphone-and-ipod-touch-wallpapers/</guid>
+      <author>peter</author>
+      <description>In my last post, I wrote about Poolgo, a great little site with really good iPhone wallpapers. These are quality wallpapers made by real designers. Well, today I happened upon a Smashing Magazine article with 100 really sweet iPhone wallpapers, which includes Poolgo in its list, but also includes way more other wallpapers. I just had to post and update with a link to this Smashing Magazine article, because it really goes way above and beyond what I wrote.
+If you’re looking for some great iPhone or iPod Touch wallpapers, you need to read this article.
+</description>
+    </item>
+    
+    <item>
+      <title>Best Image Viewer for Mac Xee</title>
+      <link>//articles/best-image-viewer-for-mac-xee/</link>
+      <pubDate>Sat, 20 Dec 2008 14:44:46 -0800</pubDate>
+      <guid isPermaLink="true">//articles/best-image-viewer-for-mac-xee/</guid>
+      <author>peter</author>
+      <description>When I used Windows, I used to use a program called ACDSee to scroll through large amounts of images within folders. It was a great way to quickly go through any type of images within a folder. This was also very useful because I tend to keep a lot of PSDs of web designs with various version of a design, so ACDSee made it really easy to scroll through and compare them. When I switched to Mac, I couldn’t do this as easily anymore. I went on a hunt to find the best image viewer for Mac, and found a great open source solution in a program called Xee. Xee is light weight, simple, and does everything the old ACDSee did for me. I highly recommend downloading this one.
+</description>
+    </item>
+    
+    <item>
       <title>PSA: Why your code changes are not displaying after browser refresh</title>
       <link>//articles/code-changes-not-displaying-after-refresh/</link>
       <pubDate>Fri, 28 Mar 2014 13:37:00 -0700</pubDate>
@@ -42,27 +63,6 @@ function phptemplate_engine_preprocess_page(&amp;amp;$variables) {
 }
 
 Create a copy of page.tpl.php and rename it to page-YOURPATH.tpl.php and begin to make your own custom edits specific to that path. Now, if you’ve got a www.yoursite.com/blog path, then Drupal will pick up page-blog.tpl.php as the template for that page. The above code is for Drupal 6. You may need to clear Drupal’s cache after you’ve done this for it to take effect.
-</description>
-    </item>
-    
-    <item>
-      <title>Best Image Viewer for Mac Xee</title>
-      <link>//articles/best-image-viewer-for-mac-xee/</link>
-      <pubDate>Sat, 20 Dec 2008 14:44:46 -0800</pubDate>
-      <guid isPermaLink="true">//articles/best-image-viewer-for-mac-xee/</guid>
-      <author>peter</author>
-      <description>When I used Windows, I used to use a program called ACDSee to scroll through large amounts of images within folders. It was a great way to quickly go through any type of images within a folder. This was also very useful because I tend to keep a lot of PSDs of web designs with various version of a design, so ACDSee made it really easy to scroll through and compare them. When I switched to Mac, I couldn’t do this as easily anymore. I went on a hunt to find the best image viewer for Mac, and found a great open source solution in a program called Xee. Xee is light weight, simple, and does everything the old ACDSee did for me. I highly recommend downloading this one.
-</description>
-    </item>
-    
-    <item>
-      <title>100 Really Good Quality iPhone and iPod Touch Wallpapers</title>
-      <link>//articles/100-really-good-quality-iphone-and-ipod-touch-wallpapers/</link>
-      <pubDate>Tue, 06 Jan 2009 14:52:30 -0800</pubDate>
-      <guid isPermaLink="true">//articles/100-really-good-quality-iphone-and-ipod-touch-wallpapers/</guid>
-      <author>peter</author>
-      <description>In my last post, I wrote about Poolgo, a great little site with really good iPhone wallpapers. These are quality wallpapers made by real designers. Well, today I happened upon a Smashing Magazine article with 100 really sweet iPhone wallpapers, which includes Poolgo in its list, but also includes way more other wallpapers. I just had to post and update with a link to this Smashing Magazine article, because it really goes way above and beyond what I wrote.
-If you’re looking for some great iPhone or iPod Touch wallpapers, you need to read this article.
 </description>
     </item>
     
