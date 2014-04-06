@@ -210,10 +210,13 @@ module.exports = function (grunt) {
     'svgmin',
     'svg2png:dist',
     'hashres',
-    'htmlmin',
-    'buildcontrol:prod'
+    'htmlmin'
   ]);
 
+
+grunt.registerTask('deploy', [
+    'buildcontrol:prod'
+  ]);
 
   grunt.registerTask('default', [
     'watch',
