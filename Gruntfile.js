@@ -151,8 +151,9 @@ module.exports = function (grunt) {
         options: {
         },
         src: [
-          'build/**/*.png',
-          'build/**/*.jpg'
+          'build/img/**/*.png',
+          'build/img/**/*.jpg',
+          'build/img/**/*.svg',
         ],
         dest: [
           'build/**/*.html',
