@@ -33,6 +33,26 @@ If you’re looking for some great iPhone or iPod Touch wallpapers, you need to 
     </item>
     
     <item>
+      <title>Improving your jQuery code</title>
+      <link>//articles/improving-your-jquery-code/</link>
+      <pubDate>Sat, 16 Nov 2013 16:32:21 -0800</pubDate>
+      <guid isPermaLink="true">//articles/improving-your-jquery-code/</guid>
+      <author>peter</author>
+      <description>Lately, I’ve been trying to improve my jQuery code performance, and get a better handle on writing plain JavaScript. In terms of jQuery in particular, I came across this post today, which although a couple years old now, provides some great tips that I think a lot of people could benefit from reading. There are a few great examples of writing better performing jQuery DOM manipulation in there.
+</description>
+    </item>
+    
+    <item>
+      <title>PSA: Why your code changes are not displaying after browser refresh</title>
+      <link>//articles/code-changes-not-displaying-after-refresh/</link>
+      <pubDate>Fri, 28 Mar 2014 13:37:00 -0700</pubDate>
+      <guid isPermaLink="true">//articles/code-changes-not-displaying-after-refresh/</guid>
+      <author>peter</author>
+      <description>After weeks of frustration, I finally figured out why my PHP code changes on my local development box weren’t always coming up in the browser after several refreshes. As it turns out, it’s a new OPCache setting as of PHP 5.5 that comes with MAMP.
+</description>
+    </item>
+    
+    <item>
       <title>Drupal 6 page.tpl.php template based on path</title>
       <link>//articles/drupal-6-page-tpl-php-template-based-on-path/</link>
       <pubDate>Sat, 05 Nov 2011 10:28:28 -0700</pubDate>
@@ -53,26 +73,6 @@ function phptemplate_engine_preprocess_page(&amp;amp;$variables) {
 }
 
 Create a copy of page.tpl.php and rename it to page-YOURPATH.tpl.php and begin to make your own custom edits specific to that path. Now, if you’ve got a www.yoursite.com/blog path, then Drupal will pick up page-blog.tpl.php as the template for that page. The above code is for Drupal 6. You may need to clear Drupal’s cache after you’ve done this for it to take effect.
-</description>
-    </item>
-    
-    <item>
-      <title>PSA: Why your code changes are not displaying after browser refresh</title>
-      <link>//articles/code-changes-not-displaying-after-refresh/</link>
-      <pubDate>Fri, 28 Mar 2014 13:37:00 -0700</pubDate>
-      <guid isPermaLink="true">//articles/code-changes-not-displaying-after-refresh/</guid>
-      <author>peter</author>
-      <description>After weeks of frustration, I finally figured out why my PHP code changes on my local development box weren’t always coming up in the browser after several refreshes. As it turns out, it’s a new OPCache setting as of PHP 5.5 that comes with MAMP.
-</description>
-    </item>
-    
-    <item>
-      <title>Improving your jQuery code</title>
-      <link>//articles/improving-your-jquery-code/</link>
-      <pubDate>Sat, 16 Nov 2013 16:32:21 -0800</pubDate>
-      <guid isPermaLink="true">//articles/improving-your-jquery-code/</guid>
-      <author>peter</author>
-      <description>Lately, I’ve been trying to improve my jQuery code performance, and get a better handle on writing plain JavaScript. In terms of jQuery in particular, I came across this post today, which although a couple years old now, provides some great tips that I think a lot of people could benefit from reading. There are a few great examples of writing better performing jQuery DOM manipulation in there.
 </description>
     </item>
     
