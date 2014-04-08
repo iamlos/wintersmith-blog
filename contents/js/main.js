@@ -71,13 +71,13 @@
       events: function(){
         var that = this;
         console.log('loaded events');
-        $(document).on('click', '.open .activate', function(event) {
+        $('html').on('click', '.open .activate', function(event) {
           event.preventDefault();
           that.closeMenu();
           console.log('click event close');
         });
 
-        $(document).on('click', '.closed .activate', function(event) {
+        $('html').on('click', '.closed .activate', function(event) {
           event.preventDefault();
           that.openMenu();
           console.log('click event open');
