@@ -12,16 +12,6 @@
     
     
     <item>
-      <title>Best Image Viewer for Mac Xee</title>
-      <link>//articles/best-image-viewer-for-mac-xee/</link>
-      <pubDate>Sat, 20 Dec 2008 14:44:46 -0800</pubDate>
-      <guid isPermaLink="true">//articles/best-image-viewer-for-mac-xee/</guid>
-      <author>peter</author>
-      <description>When I used Windows, I used to use a program called ACDSee to scroll through large amounts of images within folders. It was a great way to quickly go through any type of images within a folder. This was also very useful because I tend to keep a lot of PSDs of web designs with various version of a design, so ACDSee made it really easy to scroll through and compare them. When I switched to Mac, I couldn’t do this as easily anymore. I went on a hunt to find the best image viewer for Mac, and found a great open source solution in a program called Xee. Xee is light weight, simple, and does everything the old ACDSee did for me. I highly recommend downloading this one.
-</description>
-    </item>
-    
-    <item>
       <title>100 Really Good Quality iPhone and iPod Touch Wallpapers</title>
       <link>//articles/100-really-good-quality-iphone-and-ipod-touch-wallpapers/</link>
       <pubDate>Tue, 06 Jan 2009 14:52:30 -0800</pubDate>
@@ -43,22 +33,12 @@ If you’re looking for some great iPhone or iPod Touch wallpapers, you need to 
     </item>
     
     <item>
-      <title>Improving your jQuery code</title>
-      <link>//articles/improving-your-jquery-code/</link>
-      <pubDate>Sat, 16 Nov 2013 16:32:21 -0800</pubDate>
-      <guid isPermaLink="true">//articles/improving-your-jquery-code/</guid>
+      <title>Best Image Viewer for Mac Xee</title>
+      <link>//articles/best-image-viewer-for-mac-xee/</link>
+      <pubDate>Sat, 20 Dec 2008 14:44:46 -0800</pubDate>
+      <guid isPermaLink="true">//articles/best-image-viewer-for-mac-xee/</guid>
       <author>peter</author>
-      <description>Lately, I’ve been trying to improve my jQuery code performance, and get a better handle on writing plain JavaScript. In terms of jQuery in particular, I came across this post today, which although a couple years old now, provides some great tips that I think a lot of people could benefit from reading. There are a few great examples of writing better performing jQuery DOM manipulation in there.
-</description>
-    </item>
-    
-    <item>
-      <title>New Ghost.js inspired WordPress theme</title>
-      <link>//articles/new-ghost-inspired-wordpress-theme/</link>
-      <pubDate>Sun, 15 Dec 2013 16:39:04 -0800</pubDate>
-      <guid isPermaLink="true">//articles/new-ghost-inspired-wordpress-theme/</guid>
-      <author>peter</author>
-      <description>Recently, I’ve been inspired by the Ghost blogging platform, which I think has a really clean and elegant default theme, so I built a WordPress theme that borrows from some of the ideas that I liked from that theme.
+      <description>When I used Windows, I used to use a program called ACDSee to scroll through large amounts of images within folders. It was a great way to quickly go through any type of images within a folder. This was also very useful because I tend to keep a lot of PSDs of web designs with various version of a design, so ACDSee made it really easy to scroll through and compare them. When I switched to Mac, I couldn’t do this as easily anymore. I went on a hunt to find the best image viewer for Mac, and found a great open source solution in a program called Xee. Xee is light weight, simple, and does everything the old ACDSee did for me. I highly recommend downloading this one.
 </description>
     </item>
     
@@ -87,6 +67,16 @@ Create a copy of page.tpl.php and rename it to page-YOURPATH.tpl.php and begin t
     </item>
     
     <item>
+      <title>Improving your jQuery code</title>
+      <link>//articles/improving-your-jquery-code/</link>
+      <pubDate>Sat, 16 Nov 2013 16:32:21 -0800</pubDate>
+      <guid isPermaLink="true">//articles/improving-your-jquery-code/</guid>
+      <author>peter</author>
+      <description>Lately, I’ve been trying to improve my jQuery code performance, and get a better handle on writing plain JavaScript. In terms of jQuery in particular, I came across this post today, which although a couple years old now, provides some great tips that I think a lot of people could benefit from reading. There are a few great examples of writing better performing jQuery DOM manipulation in there.
+</description>
+    </item>
+    
+    <item>
       <title>jQuery Shine animation effect</title>
       <link>//articles/jquery-shine-animation-effect/</link>
       <pubDate>Sat, 13 Nov 2010 10:16:39 -0800</pubDate>
@@ -94,6 +84,16 @@ Create a copy of page.tpl.php and rename it to page-YOURPATH.tpl.php and begin t
       <author>peter</author>
       <description>I’ve been diving deeper into jQuery lately, because a few clients have been requesting Flash-like functionality for their websites, and I’ve been avoiding Flash since before Steve Jobs made it cool to do so. I have to say, there is more and more that jQuery can do that Flash used to only do. I recently came across one great example of this while researching button effects for a personal project (release coming soon). Addy from AddyOsmani.com posted this great article about a shine effect using jQuery called &amp;quot;ShineTime – A Kick-Ass New jQuery &amp;amp;amp; CSS3 Gallery With Animated Shine Effects.&amp;quot; The best part of the effect is that it’s so simple to implement and if you’re at all comfortable with jQuery and CSS, the method used with background-position opens up a world of possibility with other effects other than shine, which at least I wasn’t aware of. Check out his demo to see the effect in action.
 The entire thing really boils down to a few lines of jQuery Javascript code and some CSS. When a event happens, such as a hover or a page load, a shine PNG image is changed from a background position of off the screen to one that crosses to the other side off the screen. With a little modification, I made the effect display a few seconds after the page loads using setTimeout, rather than when you hover over an element, which produced a great little embellishment for a button or a logo when a visitors comes to the site. It’s a great little effect that you used to only be able to do with Flash.
+</description>
+    </item>
+    
+    <item>
+      <title>New Ghost.js inspired WordPress theme</title>
+      <link>//articles/new-ghost-inspired-wordpress-theme/</link>
+      <pubDate>Sun, 15 Dec 2013 16:39:04 -0800</pubDate>
+      <guid isPermaLink="true">//articles/new-ghost-inspired-wordpress-theme/</guid>
+      <author>peter</author>
+      <description>Recently, I’ve been inspired by the Ghost blogging platform, which I think has a really clean and elegant default theme, so I built a WordPress theme that borrows from some of the ideas that I liked from that theme.
 </description>
     </item>
     
