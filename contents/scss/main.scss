@@ -135,90 +135,6 @@ a:link, a:visited {
   text-decoration: none;
 }
 
-/**
- * SIDEBAR STUFF
- */
-
-#sidebar {
-  font-size:1.15em;
-  text-align: left;
-  background:#05b2c6 url(../img/bg.jpg);
-  padding:2em 2em 1em 2em;
-  @include breakpoint($portraittab){
-    width:356px;
-    //border-right:10px solid rgba(0,0,0,0.1s);
-    padding:3em 3em 1em 3em;
-    position:fixed;
-    left:0;
-    top:0;
-    bottom:0;
-    height:100%;
-  }
-}
-.transition #sidebar{
-  @include transition($menuanimate);
-
-  img, h2, p, .social {
-    @include transition(opacity 0.2s linear);
-  }
-}
-
-.closed #sidebar {
-  @include breakpoint($portraittab){
-    width:70px;
-    padding:3em 0 1em 0;
-    overflow:hidden;
-  }
-}
-
-.hide-content #sidebar {
-  @include breakpoint($portraittab){
-    img, h2, p, .social {
-      opacity:0;
-    }
-  }
-}
-
-#sidebar .activate {
-  display:none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -o-user-select: none;
-  user-select: none;
-  @include breakpoint($portraittab){
-    display:block;
-    cursor:pointer;
-    position: absolute;
-    bottom: .4em;
-    right: 0.53em;
-    font-size: 2em;
-    color: rgba(0,0,0,0.5);
-    z-index:3;
-  }
-}
-
-.transition #sidebar .activate {
-  @include transition(all 0.2s linear);
-}
-
-.closed #sidebar .activate {
-  @include breakpoint($portraittab){
-    @include transform(rotate(-180deg));
-
-  }
-}
-
-#sidebar h2 {
-  font-size:2.3em;
-  line-height:1em;
-  font-family: "proxima-nova-condensed",sans-serif;
-  margin:24px 0 5px -2px;
-  text-transform: uppercase;
-}
-#sidebar p {
-  margin-top:0;
-}
 .social {
   margin:0;
   padding:0;
@@ -242,33 +158,17 @@ a:link, a:visited {
 
   }
 }
-.transition .peter {
-  @include transition(all 0.7s linear);
+
+
+/**
+ * HOMEPAGE COVER
+ */
+.cover {
+  background: #05b2c6 url(../img/bg.jpg) repeat;
+  display:table;
+  width:100%;
 }
 
-.hide-content.showicons #sidebar .social {
-  @include breakpoint($portraittab){
-    position: absolute;
-    bottom: 83px;
-    left: 26px;
-    text-align: center;
-    opacity: 1;
-
-  }
-
-  li {
-    @include breakpoint($portraittab){
-      display: block;
-      margin: 0;
-      font-size: 1.1em;
-      margin-bottom: 0.75em;
-    }
-  }
-}
-
-.transition.hide-content.showicons #sidebar .social {
-  @include transition(opacity 0.7s linear);
-}
 
 
 /**
@@ -330,14 +230,9 @@ a:link, a:visited {
   @include breakpoint($portraittab){
     padding:0;
     margin-top:3em;
-    margin-left:356px;
-
   }
 }
 
-.transition #main-content, .transition #footer {
-  @include transition($menuanimate);
-}
 
 .closed #main-content, .closed #footer {
   @include breakpoint($portraittab){

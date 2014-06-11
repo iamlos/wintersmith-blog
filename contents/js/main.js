@@ -16,6 +16,23 @@
   window.App = App;
 
 
+  App.Modules.cover = {
+    init: function(){
+      this.windowSize();
+
+      var that = this;
+      $(window).resize(function() {
+        that.windowSize();
+      });
+
+    },
+    windowSize: function(){
+      var windowHeight = $(window).innerHeight();
+      $('.cover').height(windowHeight);
+    }
+  };
+
+
   App.Modules.navigation = {
       init: function(){
         this.rememberState();
