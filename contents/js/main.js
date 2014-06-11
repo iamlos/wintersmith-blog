@@ -17,18 +17,29 @@
 
 
   App.Modules.cover = {
+    el: $('.cover'),
     init: function(){
       this.windowSize();
+      this.verticalCenter();
 
       var that = this;
       $(window).resize(function() {
         that.windowSize();
+        that.verticalCenter();
       });
 
     },
     windowSize: function(){
       var windowHeight = $(window).innerHeight();
-      $('.cover').height(windowHeight);
+      this.el.height(windowHeight);
+    },
+    verticalCenter: function(){
+      var windowHeight = $(window).innerHeight();
+      var contentHeight = this.el.find('.inner').innerHeight();
+      var topMargin = Math.round(( windowHeight - contentHeight ) / 2);
+      this.el.find('.inner').css('margin-top', topMargin);
+
+
     }
   };
 

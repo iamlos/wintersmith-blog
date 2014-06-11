@@ -167,6 +167,22 @@ a:link, a:visited {
   background: #05b2c6 url(../img/bg.jpg) repeat;
   display:table;
   width:100%;
+
+  .inner {
+    width:800px;
+    margin:auto;
+  }
+
+  h2 {
+    font-size:2.3em;
+    line-height:1em;
+    font-family: "proxima-nova-condensed",sans-serif;
+    margin:24px 0 5px -2px;
+    text-transform: uppercase;
+  }
+  p {
+    font-size:1.5em;
+  }
 }
 
 

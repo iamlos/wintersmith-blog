@@ -1,9 +1,17 @@
   {{> header}}
 
   <header class="cover">
+    <div class="inner">
+      <a href="/"><img src="/img/peter.jpg" alt="Peter Szymczak" class="peter" /></a>
+
+      <h2>Hi, I'm Peter</h2>
+      <p>I'm a full-stack web developer based in Vancouver, BC. I'm passionate about great design and building simple solutions to complex problems.</p>
+    </div>
   </header>
 
   <main id="main-content" class="home">
+
+    {{> branding}}
 
     <section class="container box">
       {{#each articles}}
