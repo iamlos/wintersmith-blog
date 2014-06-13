@@ -17,7 +17,8 @@
 
 
   App.Modules.cover = {
-    el: $('.cover'),
+    el: $('.frame'),
+    text: $('.intro-text'),
     init: function(){
       this.windowSize();
       this.verticalCenter();
@@ -35,12 +36,53 @@
     },
     verticalCenter: function(){
       var windowHeight = $(window).innerHeight();
-      var contentHeight = this.el.find('.inner').innerHeight();
+      var contentHeight = this.text.find('.inner').innerHeight();
       var topMargin = Math.round(( windowHeight - contentHeight ) / 2);
-      this.el.find('.inner').css('margin-top', topMargin);
+      this.text.find('.inner').css('margin-top', topMargin);
+    }
+  };
+
+  App.Modules.coverVideo = {
+    init: function(){
+
+      var ajaxUrl = '/img/frames/imageset.json';
+      var frame = $('.frame');
+
+      $.ajax({
+          url: ajaxUrl,
+          contentType: 'application/json; charset=utf-8',
+          success: frameInit,
+          error: ajaxError
+        });
+
+      function frameInit(data) {
+        frame.css('opacity', 1);
+        frame.css('background-image', 'url('+data[0].data+')');
+
+        setTimeout(function(){
+          $('.intro-text').css('opacity', 1).find('.inner').addClass('moveup');
+        }, 500);
+
+
+        $(window).scroll(function(event) {
+          var st = $(window).scrollTop();
+
+          for(var x in data) {
+            if(st == x && st < data.length && st > 0){
+              frame.css('background-image', 'url('+data[x].data+')');
+            }
+          }
+
+        });
+      }
+
+      function ajaxError() {
+        console.log('ajax failed');
+      }
 
 
     }
+
   };
 
 
