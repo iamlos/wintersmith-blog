@@ -163,6 +163,9 @@ a:link, a:visited {
 /**
  * HOMEPAGE COVER
  */
+
+
+
 .overlay {
   background: #05b2c6;
   position: absolute;
@@ -174,6 +177,42 @@ a:link, a:visited {
   bottom: 0;
   opacity: .75;
   z-index: 3;
+}
+
+// colors
+$colors: (
+  white: #fff,
+);
+
+// functions
+@function color($name) {
+  @return map-get($colors, $name);
+}
+
+
+@-webkit-keyframes spinner {
+  0% {
+    -webkit-border-radius: 0%;
+    -webkit-transform: rotate(0deg);
+  }
+  50% {
+    -webkit-border-radius: 50%;
+    -webkit-transform: rotate(-90deg);
+  }
+}
+
+.overlay.loading:before {
+  background: transparent;
+  border: 2px solid color(white);
+  -webkit-border-radius: 0%;
+  width: 80px;
+  height: 80px;
+  -webkit-transform: rotate(0deg);
+  -webkit-animation: spinner 800ms infinite cubic-bezier(0.445, 0.050, 0.550, 0.950);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  content:'';
 }
 
 .intro-text {
@@ -224,7 +263,7 @@ a:link, a:visited {
   background: #05b2c6;
   display:table;
   width:100%;
-  background-size: 100%;
+  background-size: cover;
   -webkit-backface-visibility: hidden;
   -webkit-perspective: 1000;
   -webkit-transform: translate3d(0, 0, 0);

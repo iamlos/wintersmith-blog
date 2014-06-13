@@ -56,6 +56,8 @@
         });
 
       function frameInit(data) {
+        $('.overlay').removeClass('loading');
+
         frame.css('opacity', 1);
         frame.css('background-image', 'url('+data[0].data+')');
 
