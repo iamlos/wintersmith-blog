@@ -48,15 +48,8 @@
       var ajaxUrl = '/img/frames/imageset.json';
       var frame = $('.frame');
 
-      $.ajax({
-          url: ajaxUrl,
-          contentType: 'application/json; charset=utf-8',
-          success: frameInit,
-          error: ajaxError
-        });
-
+      // ajax success
       function frameInit(data) {
-        $('.overlay').removeClass('loading');
 
         frame.css('opacity', 1);
         frame.css('background-image', 'url('+data[0].data+')');
@@ -66,7 +59,7 @@
         }, 500);
 
 
-        $(window).scroll(function(event) {
+        $(window).scroll(function() {
           var st = $(window).scrollTop();
 
           for(var x in data) {
@@ -78,9 +71,44 @@
         });
       }
 
+      // ajax fail
       function ajaxError() {
         console.log('ajax failed');
       }
+
+
+      $.ajax({
+          url: ajaxUrl,
+          contentType: 'application/json; charset=utf-8',
+          data: {},
+          success: frameInit,
+          error: ajaxError,
+          xhr: function(){
+            var xhr = new window.XMLHttpRequest();
+
+            //Download progress
+            xhr.addEventListener('progress', function(evt){
+              if (evt.lengthComputable) {
+                var percentComplete = evt.loaded / evt.total;
+
+                //Do something with download progress
+                var statusbar = Math.ceil(percentComplete * 100);
+
+                $('.loading').css('width', statusbar+'%');
+
+                if (statusbar === 100){
+                  setTimeout(function(){
+                    $('.loading').remove();
+                  }, 500);
+                }
+
+              }
+            }, false);
+            return xhr;
+          }
+        });
+
+
 
 
     }

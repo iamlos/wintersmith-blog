@@ -179,40 +179,15 @@ a:link, a:visited {
   z-index: 3;
 }
 
-// colors
-$colors: (
-  white: #fff,
-);
-
-// functions
-@function color($name) {
-  @return map-get($colors, $name);
-}
 
 
-@-webkit-keyframes spinner {
-  0% {
-    -webkit-border-radius: 0%;
-    -webkit-transform: rotate(0deg);
-  }
-  50% {
-    -webkit-border-radius: 50%;
-    -webkit-transform: rotate(-90deg);
-  }
-}
-
-.overlay.loading:before {
-  background: transparent;
-  border: 1px solid color(white);
-  -webkit-border-radius: 0%;
-  width: 50px;
-  height: 50px;
-  -webkit-transform: rotate(0deg);
-  -webkit-animation: spinner 800ms infinite cubic-bezier(0.445, 0.050, 0.550, 0.950);
-  position: absolute;
-  top: 50%;
-  left: 50%;
+.overlay .loading {
+  background:#444;
+  height:8px;
+  width:0%;
+  display:block;
   content:'';
+  @include transition(width 0.3s linear);
 }
 
 .intro-text {
