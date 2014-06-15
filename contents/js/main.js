@@ -16,6 +16,9 @@
   window.App = App;
 
 
+
+
+
   App.Modules.cover = {
     el: $('.frame'),
     text: $('.intro-text'),
@@ -42,14 +45,24 @@
     }
   };
 
+
+
+
+
   App.Modules.coverVideo = {
+    ajaxData: {},
+    startFrame: $('.frame'),
     init: function(){
+      var that = this;
 
       var ajaxUrl = '/img/frames/imageset.json';
-      var frame = $('.frame');
+
+      var frame = this.startFrame;
 
       // ajax success
       function frameInit(data) {
+        App.Modules.coverVideo.ajaxData = data;
+
 
         frame.css('opacity', 1);
         frame.css('background-image', 'url('+data[0].data+')');
@@ -58,17 +71,6 @@
           $('.intro-text').css('opacity', 1).find('.inner').addClass('moveup');
         }, 500);
 
-
-        $(window).scroll(function() {
-          var st = $(window).scrollTop();
-
-          for(var x in data) {
-            if(st == x && st < data.length && st > 0){
-              frame.css('background-image', 'url('+data[x].data+')');
-            }
-          }
-
-        });
       }
 
       // ajax fail
@@ -110,79 +112,131 @@
 
 
 
+      $(window).on({
+        'DOMMouseScroll mousewheel': that.scrollSlide
+      });
+
+    },
+    scrollSlide: function(e){
+          // --- Scrolling up ---
+      if (e.originalEvent.detail < 0 || e.originalEvent.wheelDelta > 0) {
+
+        console.log('up');
+
+      }
+
+      // --- Scrolling down ---
+      else {
+        App.Modules.coverVideo.playSlide();
+        console.log('down');
+
+      }
+
+
+      return false;
+
+
+    },
+    playSlide: function(){
+     // console.log(this.ajaxData);
+      var that = this;
+
+      var fps = 0;
+
+      if(this.ajaxData.length){
+        var startFrames = setInterval(function(){
+          that.startFrame.css('background-image', 'url('+that.ajaxData[fps].data+')');
+          fps++;
+          console.log('next');
+          console.log(fps);
+
+          if(fps === that.ajaxData.length){
+            clearInterval(startFrames);
+          }
+        }, 40);
+        startFrames();
+      }
+
+
+
+
+
+
 
     }
 
   };
 
 
-  App.Modules.navigation = {
-      init: function(){
-        this.rememberState();
-        this.events();
-      },
-      openMenu: function(){
-        var body = $('body');
-        localStorage.setItem('navState', 'open');
-
-        body.addClass('transition').removeClass('closed').removeClass('showicons').addClass('open');
 
 
-        setTimeout(function(){
-          body.removeClass('hide-content');
-        },400);
-      },
-      closeMenu: function(){
-        var body = $('body');
-        localStorage.setItem('navState', 'closed');
 
-        body.addClass('transition').addClass('hide-content');
+  // App.Modules.navigation = {
+  //   init: function(){
+  //     this.rememberState();
+  //     this.events();
+  //   },
+  //   openMenu: function(){
+  //     var body = $('body');
+  //     localStorage.setItem('navState', 'open');
 
-        setTimeout(function(){
-          body.removeClass('open').addClass('closed');
-
-          setTimeout(function(){
-            body.addClass('showicons');
-          },500);
-
-        },400);
-
-      },
-      rememberState: function(){
-        if (Modernizr.localstorage) {
-          var navState = localStorage.getItem('navState');
-          var body = $('body');
-
-          if (navState === null){
-            localStorage.setItem('navState', 'open');
-          }
-
-          if (navState === 'open'){
-            body.removeClass('closed').removeClass('showicons').addClass('open').removeClass('hide-content');
-
-          }
-          else if(navState === 'closed'){
-            body.addClass('hide-content').removeClass('open').addClass('closed').addClass('showicons');
-          }
+  //     body.addClass('transition').removeClass('closed').removeClass('showicons').addClass('open');
 
 
-        }
-      },
-      events: function(){
-        var that = this;
-        $(document).on('click', '.open .activate', function(event) {
-          event.preventDefault();
-          that.closeMenu();
-        });
+  //     setTimeout(function(){
+  //       body.removeClass('hide-content');
+  //     },400);
+  //   },
+  //   closeMenu: function(){
+  //     var body = $('body');
+  //     localStorage.setItem('navState', 'closed');
 
-        $(document).on('click', '.closed .activate', function(event) {
-          event.preventDefault();
-          that.openMenu();
-        });
+  //     body.addClass('transition').addClass('hide-content');
 
-      }
-    };
+  //     setTimeout(function(){
+  //       body.removeClass('open').addClass('closed');
 
+  //       setTimeout(function(){
+  //         body.addClass('showicons');
+  //       },500);
+
+  //     },400);
+
+  //   },
+  //   rememberState: function(){
+  //     if (Modernizr.localstorage) {
+  //       var navState = localStorage.getItem('navState');
+  //       var body = $('body');
+
+  //       if (navState === null){
+  //         localStorage.setItem('navState', 'open');
+  //       }
+
+  //       if (navState === 'open'){
+  //         body.removeClass('closed').removeClass('showicons').addClass('open').removeClass('hide-content');
+
+  //       }
+  //       else if(navState === 'closed'){
+  //         body.addClass('hide-content').removeClass('open').addClass('closed').addClass('showicons');
+  //       }
+
+
+  //     }
+  //   },
+  //   events: function(){
+  //     var that = this;
+  //     $(document).on('click', '.open .activate', function(event) {
+  //       event.preventDefault();
+  //       that.closeMenu();
+  //     });
+
+  //     $(document).on('click', '.closed .activate', function(event) {
+  //       event.preventDefault();
+  //       that.openMenu();
+  //     });
+
+  //   }
+  // };
 
 
 
