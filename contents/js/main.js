@@ -60,7 +60,7 @@
       var frame = this.startFrame;
 
       // ajax success
-      function frameInit(data) {
+      function ajaxSuccess(data) {
         App.Modules.coverVideo.ajaxData = data;
 
 
@@ -83,7 +83,7 @@
           url: ajaxUrl,
           contentType: 'application/json; charset=utf-8',
           data: {},
-          success: frameInit,
+          success: ajaxSuccess,
           error: ajaxError,
           xhr: function(){
             var xhr = new window.XMLHttpRequest();
@@ -113,11 +113,11 @@
 
 
       $(window).on({
-        'DOMMouseScroll mousewheel': that.scrollSlide
+        'DOMMouseScroll mousewheel': that.scrollControl
       });
 
     },
-    scrollSlide: function(e){
+    scrollControl: function(e){
           // --- Scrolling up ---
       if (e.originalEvent.detail < 0 || e.originalEvent.wheelDelta > 0) {
 
@@ -144,6 +144,7 @@
       var fps = 0;
 
       if(this.ajaxData.length){
+
         var startFrames = setInterval(function(){
           that.startFrame.css('background-image', 'url('+that.ajaxData[fps].data+')');
           fps++;
@@ -154,12 +155,8 @@
             clearInterval(startFrames);
           }
         }, 40);
-        startFrames();
+
       }
-
-
-
-
 
 
 
