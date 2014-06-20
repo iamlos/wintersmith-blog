@@ -25,6 +25,7 @@
     init: function(){
       this.windowSize();
       this.verticalCenter();
+      this.canvasDraw();
 
       var that = this;
       $(window).resize(function() {
@@ -42,7 +43,103 @@
       var contentHeight = this.text.find('.inner').innerHeight();
       var topMargin = Math.round(( windowHeight - contentHeight ) / 2);
       this.text.find('.inner').css('margin-top', topMargin);
+    },
+
+    canvasDraw: function(){
+      var stage;
+      var circles;
+      var offsetX, offsetY;
+      var colors = ['#B2949D', '#FFF578', '#FF5F8D', '#37A9CC', '#188EB2'];
+
+      function init() {
+          initStages();
+          initCircles();
+          animate();
+
+      }
+
+      // Init Canvas
+      function initStages() {
+          offsetX = (window.innerWidth-600)/2;
+          offsetY = (window.innerHeight-300)/2;
+
+          stage = new createjs.Stage("stage");
+          stage.canvas.width = window.innerWidth;
+          stage.canvas.height = window.innerHeight;
+      }
+
+
+
+
+      function initCircles() {
+          circles = [];
+          for(var i=0; i<100; i++) {
+              var circle = new createjs.Shape();
+              var r = 3;
+              var x = window.innerWidth*Math.random();
+              var y = window.innerHeight*Math.random();
+              var color = colors[Math.floor(i%colors.length)];
+              var alpha = 0.2 + Math.random()*0.5;
+              circle.alpha = alpha;
+              circle.radius = r;
+              circle.graphics.beginFill(color).drawCircle(0, 0, r);
+              circle.x = x;
+              circle.y = y;
+              circles.push(circle);
+              stage.addChild(circle);
+              circle.movement = 'float';
+              tweenCircle(circle);
+          }
+      }
+
+
+      // animating circles
+      function animate() {
+          stage.update();
+          requestAnimationFrame(animate);
+      }
+
+      function tweenCircle(c, dir) {
+          if(c.tween) c.tween.kill();
+          if(dir == 'in') {
+              c.tween = TweenLite.to(c, 0.4, {x: c.originX, y: c.originY, ease:Quad.easeInOut, alpha: 1, radius: 5, scaleX: 0.4, scaleY: 0.4, onComplete: function() {
+                  c.movement = 'jiggle';
+                  tweenCircle(c);
+              }});
+          } else if(dir == 'out') {
+              c.tween = TweenLite.to(c, 0.8, {x: window.innerWidth*Math.random(), y: window.innerHeight*Math.random(), ease:Quad.easeInOut, alpha: 0.2 + Math.random()*0.5, scaleX: 1, scaleY: 1, onComplete: function() {
+                  c.movement = 'float';
+                  tweenCircle(c);
+              }});
+          } else {
+              if(c.movement == 'float') {
+                  c.tween = TweenLite.to(c, 5 + Math.random()*3.5, {x: c.x + -100+Math.random()*200, y: c.y + -100+Math.random()*200, ease:Quad.easeInOut, alpha: 0.2 + Math.random()*0.5,
+                      onComplete: function() {
+                          tweenCircle(c);
+                      }});
+              } else {
+                  c.tween = TweenLite.to(c, 0.05, {x: c.originX + Math.random()*3, y: c.originY + Math.random()*3, ease:Quad.easeInOut,
+                      onComplete: function() {
+                          tweenCircle(c);
+                      }});
+              }
+          }
+      }
+
+      window.onload = function() { init() };
+
+      $(window).on({
+       'DOMMouseScroll mousewheel': function(){
+          for(var i= 0; i < 100; i++) {
+              tweenCircle(circles[i], 'out');
+          }
+       }
+      });
+
+
     }
+
+
   };
 
 
@@ -52,6 +149,8 @@
   App.Modules.coverVideo = {
     ajaxData: {},
     startFrame: $('.frame'),
+    frameDelta: 0,
+
     init: function(){
       var that = this;
 
@@ -113,54 +212,46 @@
 
 
       $(window).on({
-        'DOMMouseScroll mousewheel': that.scrollControl
+       // 'DOMMouseScroll mousewheel': that.scrollControl
       });
 
     },
     scrollControl: function(e){
-          // --- Scrolling up ---
+
+      // --- Scrolling up ---
       if (e.originalEvent.detail < 0 || e.originalEvent.wheelDelta > 0) {
 
         console.log('up');
+        console.log(App.Modules.coverVideo.frameDelta);
+        if (App.Modules.coverVideo.frameDelta > 0){
+          App.Modules.coverVideo.frameDelta--;
+
+        //  App.Modules.coverVideo.playSlide(App.Modules.coverVideo.frameDelta);
+        }
+
 
       }
 
       // --- Scrolling down ---
       else {
-        App.Modules.coverVideo.playSlide();
         console.log('down');
 
+        if(App.Modules.coverVideo.frameDelta < App.Modules.coverVideo.ajaxData.length){
+          App.Modules.coverVideo.frameDelta++;
+
+       //   App.Modules.coverVideo.playSlide(App.Modules.coverVideo.frameDelta);
+        }
+
       }
+
+
 
 
       return false;
 
 
     },
-    playSlide: function(){
-     // console.log(this.ajaxData);
-      var that = this;
 
-      var fps = 0;
-
-      if(this.ajaxData.length){
-
-        var startFrames = setInterval(function(){
-          that.startFrame.css('background-image', 'url('+that.ajaxData[fps].data+')');
-          fps++;
-          console.log('next');
-          console.log(fps);
-
-          if(fps === that.ajaxData.length){
-            clearInterval(startFrames);
-          }
-        }, 40);
-
-      }
-
-
-
-    }
 
   };
 
