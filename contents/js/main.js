@@ -16,7 +16,7 @@
   window.App = App;
 
 
-
+scrollJack = true;
 
 
   App.Modules.cover = {
@@ -73,9 +73,9 @@
 
       function initCircles() {
           circles = [];
-          for(var i=0; i<100; i++) {
+          for(var i=0; i<50; i++) {
               var circle = new createjs.Shape();
-              var r = 3;
+              var r = 200;
               var x = window.innerWidth*Math.random();
               var y = window.innerHeight*Math.random();
               var color = colors[Math.floor(i%colors.length)];
@@ -101,12 +101,12 @@
 
       function tweenCircle(c, dir) {
           if(c.tween) c.tween.kill();
-          if(dir == 'in') {
+          if(dir == 'up') {
               c.tween = TweenLite.to(c, 0.4, {x: c.originX, y: c.originY, ease:Quad.easeInOut, alpha: 1, radius: 5, scaleX: 0.4, scaleY: 0.4, onComplete: function() {
                   c.movement = 'jiggle';
                   tweenCircle(c);
               }});
-          } else if(dir == 'out') {
+          } else if(dir == 'down') {
               c.tween = TweenLite.to(c, 0.8, {x: window.innerWidth*Math.random(), y: window.innerHeight*Math.random(), ease:Quad.easeInOut, alpha: 0.2 + Math.random()*0.5, scaleX: 1, scaleY: 1, onComplete: function() {
                   c.movement = 'float';
                   tweenCircle(c);
@@ -128,13 +128,30 @@
 
       window.onload = function() { init() };
 
-      $(window).on({
-       'DOMMouseScroll mousewheel': function(){
-          for(var i= 0; i < 100; i++) {
-              tweenCircle(circles[i], 'out');
-          }
-       }
-      });
+      // $(window).on({
+      //  'DOMMouseScroll mousewheel': function(e){
+      //   if (e.originalEvent.detail < 0 || e.originalEvent.wheelDelta > 0) {
+      //     for(var i= 0; i < circles.length; i++) {
+      //         tweenCircle(circles[i], 'up');
+      //     }
+      //   }
+      //   else {
+      //     for(var i= 0; i < circles.length; i++) {
+      //         tweenCircle(circles[i], 'down');
+      //     }
+
+      //     setTimeout(function(){
+      //       scrollJack = false;
+      //     }, 1200);
+
+      //   }
+
+      //   if (scrollJack === true ){
+      //     return false;
+      //   }
+
+      //  }
+      // });
 
 
     }
@@ -164,10 +181,12 @@
 
 
         frame.css('opacity', 1);
-        frame.css('background-image', 'url('+data[0].data+')');
+      //  frame.css('background-image', 'url('+data[0].data+')');
 
         setTimeout(function(){
           $('.intro-text').css('opacity', 1).find('.inner').addClass('moveup');
+
+
         }, 500);
 
       }
@@ -226,7 +245,7 @@
         if (App.Modules.coverVideo.frameDelta > 0){
           App.Modules.coverVideo.frameDelta--;
 
-        //  App.Modules.coverVideo.playSlide(App.Modules.coverVideo.frameDelta);
+         // App.Modules.coverVideo.playSlide(App.Modules.coverVideo.frameDelta);
         }
 
 
@@ -239,7 +258,7 @@
         if(App.Modules.coverVideo.frameDelta < App.Modules.coverVideo.ajaxData.length){
           App.Modules.coverVideo.frameDelta++;
 
-       //   App.Modules.coverVideo.playSlide(App.Modules.coverVideo.frameDelta);
+          //App.Modules.coverVideo.playSlide(App.Modules.coverVideo.frameDelta);
         }
 
       }
