@@ -55,6 +55,11 @@ scrollJack = true;
           initStages();
           initCircles();
           animate();
+          $('.frame').css('opacity', 1);
+
+          setTimeout(function(){
+            $('.intro-text').css('opacity', 1).find('.inner').addClass('moveup');
+          }, 500);
 
       }
 
@@ -163,116 +168,116 @@ scrollJack = true;
 
 
 
-  App.Modules.coverVideo = {
-    ajaxData: {},
-    startFrame: $('.frame'),
-    frameDelta: 0,
+  // App.Modules.coverVideo = {
+  //   ajaxData: {},
+  //   startFrame: $('.frame'),
+  //   frameDelta: 0,
 
-    init: function(){
-      var that = this;
+  //   init: function(){
+  //     var that = this;
 
-      var ajaxUrl = '/img/frames/imageset.json';
+  //     var ajaxUrl = '/img/frames/imageset.json';
 
-      var frame = this.startFrame;
+  //     var frame = this.startFrame;
 
-      // ajax success
-      function ajaxSuccess(data) {
-        App.Modules.coverVideo.ajaxData = data;
-
-
-        frame.css('opacity', 1);
-      //  frame.css('background-image', 'url('+data[0].data+')');
-
-        setTimeout(function(){
-          $('.intro-text').css('opacity', 1).find('.inner').addClass('moveup');
+  //     // ajax success
+  //     function ajaxSuccess(data) {
+  //       App.Modules.coverVideo.ajaxData = data;
 
 
-        }, 500);
+  //       frame.css('opacity', 1);
+  //     //  frame.css('background-image', 'url('+data[0].data+')');
 
-      }
-
-      // ajax fail
-      function ajaxError() {
-        console.log('ajax failed');
-      }
+  //       setTimeout(function(){
+  //         $('.intro-text').css('opacity', 1).find('.inner').addClass('moveup');
 
 
-      $.ajax({
-          url: ajaxUrl,
-          contentType: 'application/json; charset=utf-8',
-          data: {},
-          success: ajaxSuccess,
-          error: ajaxError,
-          xhr: function(){
-            var xhr = new window.XMLHttpRequest();
+  //       }, 500);
 
-            //Download progress
-            xhr.addEventListener('progress', function(evt){
-              if (evt.lengthComputable) {
-                var percentComplete = evt.loaded / evt.total;
+  //     }
 
-                //Do something with download progress
-                var statusbar = Math.ceil(percentComplete * 100);
-
-                $('.loading').css('width', statusbar+'%');
-
-                if (statusbar === 100){
-                  setTimeout(function(){
-                    $('.loading').remove();
-                  }, 500);
-                }
-
-              }
-            }, false);
-            return xhr;
-          }
-        });
+  //     // ajax fail
+  //     function ajaxError() {
+  //       console.log('ajax failed');
+  //     }
 
 
+  //     $.ajax({
+  //         url: ajaxUrl,
+  //         contentType: 'application/json; charset=utf-8',
+  //         data: {},
+  //         success: ajaxSuccess,
+  //         error: ajaxError,
+  //         xhr: function(){
+  //           var xhr = new window.XMLHttpRequest();
 
-      $(window).on({
-       // 'DOMMouseScroll mousewheel': that.scrollControl
-      });
+  //           //Download progress
+  //           xhr.addEventListener('progress', function(evt){
+  //             if (evt.lengthComputable) {
+  //               var percentComplete = evt.loaded / evt.total;
 
-    },
-    scrollControl: function(e){
+  //               //Do something with download progress
+  //               var statusbar = Math.ceil(percentComplete * 100);
 
-      // --- Scrolling up ---
-      if (e.originalEvent.detail < 0 || e.originalEvent.wheelDelta > 0) {
+  //               $('.loading').css('width', statusbar+'%');
 
-        console.log('up');
-        console.log(App.Modules.coverVideo.frameDelta);
-        if (App.Modules.coverVideo.frameDelta > 0){
-          App.Modules.coverVideo.frameDelta--;
+  //               if (statusbar === 100){
+  //                 setTimeout(function(){
+  //                   $('.loading').remove();
+  //                 }, 500);
+  //               }
 
-         // App.Modules.coverVideo.playSlide(App.Modules.coverVideo.frameDelta);
-        }
-
-
-      }
-
-      // --- Scrolling down ---
-      else {
-        console.log('down');
-
-        if(App.Modules.coverVideo.frameDelta < App.Modules.coverVideo.ajaxData.length){
-          App.Modules.coverVideo.frameDelta++;
-
-          //App.Modules.coverVideo.playSlide(App.Modules.coverVideo.frameDelta);
-        }
-
-      }
+  //             }
+  //           }, false);
+  //           return xhr;
+  //         }
+  //       });
 
 
 
+  //     $(window).on({
+  //      // 'DOMMouseScroll mousewheel': that.scrollControl
+  //     });
 
-      return false;
+  //   },
+  //   scrollControl: function(e){
+
+  //     // --- Scrolling up ---
+  //     if (e.originalEvent.detail < 0 || e.originalEvent.wheelDelta > 0) {
+
+  //       console.log('up');
+  //       console.log(App.Modules.coverVideo.frameDelta);
+  //       if (App.Modules.coverVideo.frameDelta > 0){
+  //         App.Modules.coverVideo.frameDelta--;
+
+  //        // App.Modules.coverVideo.playSlide(App.Modules.coverVideo.frameDelta);
+  //       }
 
 
-    },
+  //     }
+
+  //     // --- Scrolling down ---
+  //     else {
+  //       console.log('down');
+
+  //       if(App.Modules.coverVideo.frameDelta < App.Modules.coverVideo.ajaxData.length){
+  //         App.Modules.coverVideo.frameDelta++;
+
+  //         //App.Modules.coverVideo.playSlide(App.Modules.coverVideo.frameDelta);
+  //       }
+
+  //     }
 
 
-  };
+
+
+  //     return false;
+
+
+  //   },
+
+
+  // };
 
 
 
