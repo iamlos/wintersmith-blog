@@ -61,6 +61,7 @@ scrollJack = true;
             $('.intro-text').css('opacity', 1).find('.inner').addClass('moveup');
           }, 500);
 
+
       }
 
       // Init Canvas
@@ -95,6 +96,16 @@ scrollJack = true;
               circle.movement = 'float';
               tweenCircle(circle);
           }
+
+          $('.peter').on('click', function(event) {
+            event.preventDefault();
+
+            for(var i= 0; i < circles.length; i++) {
+              tweenCircle(circles[i], 'down');
+
+            }
+
+          });
       }
 
 
@@ -132,6 +143,9 @@ scrollJack = true;
       }
 
       window.onload = function() { init() };
+
+
+
 
       // $(window).on({
       //  'DOMMouseScroll mousewheel': function(e){
