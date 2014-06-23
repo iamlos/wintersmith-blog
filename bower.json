@@ -1,0 +1,18 @@
+{
+  "name": "technoholic",
+  "version": "0.1.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "requirejs": "latest",
+    "jquery": "latest",
+    "fastclick": "latest",
+    "modernizr": "latest",
+    "greensock": "~1.11.8",
+    "easeljs": "*"
+  },
+  "devDependencies": {}
+}

@@ -209,7 +209,11 @@ a:link, a:visited {
 
 
   .inner {
-      width:600px;
+    padding:0 2em;
+      @include breakpoint($portraittab){
+        width:600px;
+        padding:0;
+      }
       margin:auto;
       text-align: center;
       @include transform(translate(0px,40px));
