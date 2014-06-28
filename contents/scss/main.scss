@@ -4,6 +4,7 @@
 @import "susy";
 @import "breakpoint";
 
+$ptab: 600px;
 $portraittab: 768px;
 $tab: 1024px;
 
@@ -153,6 +154,11 @@ a:link, a:visited {
   opacity:0.95;
   margin:auto;
   margin-bottom:1em;
+  width:120px;
+  height:auto;
+  @include breakpoint($ptab){
+    width:200px;
+  }
 
   &:hover{
 
@@ -175,7 +181,7 @@ a:link, a:visited {
   top: 0;
   right: 0;
   bottom: 0;
-  opacity: .65;
+  opacity: 1;
   z-index: 3;
 }
 
@@ -189,6 +195,97 @@ a:link, a:visited {
   content:'';
   @include transition(width 0.3s linear);
 }
+
+
+@-webkit-keyframes bounce {
+0%, 20%, 50%, 80%, 100% {
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+}
+
+40% {
+  -webkit-transform: translateY(20px);
+  -moz-transform: translateY(20px);
+  -ms-transform: translateY(20px);
+  transform: translateY(20px);
+}
+
+60% {
+  -webkit-transform: translateY(10px);
+  -moz-transform: translateY(10px);
+  -ms-transform: translateY(10px);
+  transform: translateY(10px);
+}
+}
+@-moz-keyframes bounce {
+0%, 20%, 50%, 80%, 100% {
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+}
+
+40% {
+  -webkit-transform: translateY(20px);
+  -moz-transform: translateY(20px);
+  -ms-transform: translateY(20px);
+  transform: translateY(20px);
+}
+
+60% {
+  -webkit-transform: translateY(10px);
+  -moz-transform: translateY(10px);
+  -ms-transform: translateY(10px);
+  transform: translateY(10px);
+}
+}
+@-ms-keyframes bounce {
+0%, 20%, 50%, 80%, 100% {
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+}
+
+40% {
+  -webkit-transform: translateY(20px);
+  -moz-transform: translateY(20px);
+  -ms-transform: translateY(20px);
+  transform: translateY(20px);
+}
+
+60% {
+  -webkit-transform: translateY(10px);
+  -moz-transform: translateY(10px);
+  -ms-transform: translateY(10px);
+  transform: translateY(10px);
+}
+}
+@keyframes bounce {
+0%, 20%, 50%, 80%, 100% {
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+}
+
+40% {
+  -webkit-transform: translateY(20px);
+  -moz-transform: translateY(20px);
+  -ms-transform: translateY(20px);
+  transform: translateY(20px);
+}
+
+60% {
+  -webkit-transform: translateY(10px);
+  -moz-transform: translateY(10px);
+  -ms-transform: translateY(10px);
+  transform: translateY(10px);
+}
+}
+
 
 .intro-text {
   position: absolute;
@@ -224,16 +321,43 @@ a:link, a:visited {
       }
   }
 
+
+  .scrolldown {
+    position: absolute;
+    bottom: 20px;
+    color: #fff;
+    font-size: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    left: 50%;
+    right: 50%;
+    -webkit-animation: bounce 4s infinite;
+    -moz-animation: bounce 4s infinite;
+    -ms-animation: bounce 4s infinite;
+    animation: bounce 4s infinite;
+
+    display:none;
+    @include breakpoint($ptab){
+      display:block;
+    }
+  }
+
   h2 {
-    font-size:3.3em;
+    font-size:2.75em;
     line-height:1em;
     font-family: "proxima-nova-condensed",sans-serif;
     margin:24px 0 5px -2px;
     text-transform: uppercase;
+    @include breakpoint($ptab){
+      font-size:3.3em;
+    }
   }
   p {
-    font-size:1.5em;
+    font-size:1.1em;
     line-height: 1.4;
+    @include breakpoint($ptab){
+      font-size:1.5em;
+    }
   }
 
 }

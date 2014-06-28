@@ -21,11 +21,11 @@ define([], function(){
 
     },
     windowSize: function(){
-      var windowHeight = $(window).innerHeight();
+      var windowHeight = window.innerHeight;
       this.el.height(windowHeight);
     },
     verticalCenter: function(){
-      var windowHeight = $(window).innerHeight();
+      var windowHeight = window.innerHeight;
       var contentHeight = this.text.find('.inner').innerHeight();
       var topMargin = Math.round(( windowHeight - contentHeight ) / 2);
       this.text.find('.inner').css('margin-top', topMargin);
@@ -35,7 +35,7 @@ define([], function(){
       var stage;
       var circles;
       var offsetX, offsetY;
-      var colors = ['#B2949D', '#FFF578', '#FF5F8D', '#37A9CC', '#188EB2'];
+      var colors = ['#b4909b', '#fff35c', '#fc5887', '#37a5c7', '#1589ac'];
 
       function init() {
           initStages();
@@ -44,6 +44,7 @@ define([], function(){
 
 
           $('.frame').css('opacity', 1);
+          $('.overlay').css('opacity', 0.65);
 
 
           setTimeout(function(){
