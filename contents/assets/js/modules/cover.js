@@ -44,7 +44,7 @@ define([], function(){
 
 
           $('.frame').css('opacity', 1);
-          $('.overlay').css('opacity', 0.65);
+          $('.overlay').css('opacity', 0.7);
 
 
           setTimeout(function(){

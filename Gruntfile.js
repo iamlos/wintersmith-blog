@@ -31,8 +31,8 @@ module.exports = function (grunt) {
         files: ['contents/css/{,**/}*.css']
       },
       js: {
-        files: ['contents/js/{,**/}*.js', '!contents/js/{,**/}*.min.js'],
-        tasks: ['jshint', 'uglify:dist']
+        files: ['contents/js/{,**/}*.js', '!contents/js/{,**/}*.min.js']
+        // tasks: ['jshint', 'uglify:dist']
       }
     },
 
@@ -53,28 +53,47 @@ module.exports = function (grunt) {
       }
     },
 
-    jshint: {
-      options: {
-        jshintrc: '.jshintrc'
-      },
-      all: ['contents/js/{,**/}*.js', '!contents/js/{,**/}*.min.js']
-    },
+    requirejs : {
+      dist : {
+        options : {
+          baseUrl: 'contents/assets/js',
+          mainConfigFile: 'contents/assets/js/main.js',
+          paths: {
+            jquery: 'empty:',
+            underscore: 'empty:',
+            app: 'app'
+          },
+          dir: 'build/assets/js',
+          optimize : "uglify2",
+          inlineText : true,
+          findNestedDependencies : true,
 
-    uglify: {
-      dist: {
-        options: {
-          mangle: true,
-          compress: true
-        },
-        files: [{
-          expand: true,
-          cwd: 'build/js',
-          src: ['**/*.js', '!**/*.min.js'],
-          dest: 'build/js',
-          ext: '.js'
-        }]
+        }
       }
     },
+
+    // jshint: {
+    //   options: {
+    //     jshintrc: '.jshintrc'
+    //   },
+    //   all: ['contents/js/{,**/}*.js', '!contents/js/{,**/}*.min.js']
+    // },
+
+    // uglify: {
+    //   dist: {
+    //     options: {
+    //       mangle: true,
+    //       compress: true
+    //     },
+    //     files: [{
+    //       expand: true,
+    //       cwd: 'build/js',
+    //       src: ['**/*.js', '!**/*.min.js'],
+    //       dest: 'build/js',
+    //       ext: '.js'
+    //     }]
+    //   }
+    // },
 
     imagemin: {
       dist: {
@@ -141,12 +160,12 @@ module.exports = function (grunt) {
         src: 'build/**/*.css',
         dest: 'build/**/*.html'
       },
-      js: {
-        options: {
-        },
-        src: 'build/**/*.js',
-        dest: 'build/**/*.html'
-      },
+      // js: {
+      //   options: {
+      //   },
+      //   src: 'build/**/*.js',
+      //   dest: 'build/**/*.html'
+      // },
       images: {
         options: {
         },
@@ -199,14 +218,15 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-hashres');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-build-control');
+  grunt.loadNpmTasks('grunt-contrib-requirejs');
 
 
   grunt.registerTask('build', [
     'compass',
-    'jshint',
+    'requirejs',
     'clean',
     'wintersmith:build',
-    'uglify',
+    // 'uglify',
     'imagemin',
     'svgmin',
     'svg2png:dist',
@@ -222,8 +242,8 @@ grunt.registerTask('deploy', [
   grunt.registerTask('default', [
     'watch',
     'wintersmith:build',
-    'uglify:dist',
-    'jshint:dist'
+    //'uglify:dist',
+    //'jshint:dist'
   ]);
 
   grunt.registerTask('preview', ['concurrent:preview']);
