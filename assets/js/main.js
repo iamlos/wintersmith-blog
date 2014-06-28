@@ -13,10 +13,12 @@ require.config({
     domReady: 'assets/js/modules/domReady',
     cover: 'assets/js/modules/cover'
 
-  }
-  // shim: {
-
-  // },
+  },
+  shim: {
+    app: {
+      deps: ['jquery']
+    }
+  },
 
 });
 
