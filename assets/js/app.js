@@ -1,4 +1,4 @@
-define(['jquery', 'domReady', 'cover', 'tweenlite', 'easing', 'easeljs'], function ($, domReady, cover, tweenlite, easing, easeljs) {
+define(['jquery', 'domReady', 'tweenlite', 'easing', 'easeljs', 'cover'], function ($, domReady, tweenlite, easing, easeljs, cover) {
   domReady(function () {
 
     if ($('.frame').length){
