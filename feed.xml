@@ -2,7 +2,7 @@
 
 <rss version='2.0' xmlns:content='http://purl.org/rss/1.0/modules/content/' xmlns:wfw='http://wellformedweb.org/CommentAPI/' xmlns:dc='http://purl.org/dc/elements/1.1/' xmlns:atom='http://www.w3.org/2005/Atom'>
   <channel>
-    <title>Technology, design, and development - technoholic.ca</title>
+    <title>Technology and Design - technoholic.ca</title>
     <atom:link href="//feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>/</link>
     <description>One man&#x27;s obsession with creating the interwebs.</description>
@@ -23,22 +23,22 @@ If you’re looking for some great iPhone or iPod Touch wallpapers, you need to 
     </item>
     
     <item>
-      <title>PSA: Why your code changes are not displaying after browser refresh</title>
-      <link>//articles/code-changes-not-displaying-after-refresh/</link>
-      <pubDate>Fri, 28 Mar 2014 13:37:00 -0700</pubDate>
-      <guid isPermaLink="true">//articles/code-changes-not-displaying-after-refresh/</guid>
-      <author>peter</author>
-      <description>After weeks of frustration, I finally figured out why my PHP code changes on my local development box weren’t always coming up in the browser after several refreshes. As it turns out, it’s a new OPCache setting as of PHP 5.5 that comes with MAMP.
-</description>
-    </item>
-    
-    <item>
       <title>Best Image Viewer for Mac Xee</title>
       <link>//articles/best-image-viewer-for-mac-xee/</link>
       <pubDate>Sat, 20 Dec 2008 14:44:46 -0800</pubDate>
       <guid isPermaLink="true">//articles/best-image-viewer-for-mac-xee/</guid>
       <author>peter</author>
       <description>When I used Windows, I used to use a program called ACDSee to scroll through large amounts of images within folders. It was a great way to quickly go through any type of images within a folder. This was also very useful because I tend to keep a lot of PSDs of web designs with various version of a design, so ACDSee made it really easy to scroll through and compare them. When I switched to Mac, I couldn’t do this as easily anymore. I went on a hunt to find the best image viewer for Mac, and found a great open source solution in a program called Xee. Xee is light weight, simple, and does everything the old ACDSee did for me. I highly recommend downloading this one.
+</description>
+    </item>
+    
+    <item>
+      <title>PSA: Why your code changes are not displaying after browser refresh</title>
+      <link>//articles/code-changes-not-displaying-after-refresh/</link>
+      <pubDate>Fri, 28 Mar 2014 13:37:00 -0700</pubDate>
+      <guid isPermaLink="true">//articles/code-changes-not-displaying-after-refresh/</guid>
+      <author>peter</author>
+      <description>After weeks of frustration, I finally figured out why my PHP code changes on my local development box weren’t always coming up in the browser after several refreshes. As it turns out, it’s a new OPCache setting as of PHP 5.5 that comes with MAMP.
 </description>
     </item>
     
