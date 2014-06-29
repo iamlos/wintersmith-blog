@@ -12,12 +12,13 @@
     
     
     <item>
-      <title>PSA: Why your code changes are not displaying after browser refresh</title>
-      <link>//articles/code-changes-not-displaying-after-refresh/</link>
-      <pubDate>Fri, 28 Mar 2014 13:37:00 -0700</pubDate>
-      <guid isPermaLink="true">//articles/code-changes-not-displaying-after-refresh/</guid>
+      <title>100 Really Good Quality iPhone and iPod Touch Wallpapers</title>
+      <link>//articles/100-really-good-quality-iphone-and-ipod-touch-wallpapers/</link>
+      <pubDate>Tue, 06 Jan 2009 14:52:30 -0800</pubDate>
+      <guid isPermaLink="true">//articles/100-really-good-quality-iphone-and-ipod-touch-wallpapers/</guid>
       <author>peter</author>
-      <description>After weeks of frustration, I finally figured out why my PHP code changes on my local development box weren’t always coming up in the browser after several refreshes. As it turns out, it’s a new OPCache setting as of PHP 5.5 that comes with MAMP.
+      <description>In my last post, I wrote about Poolgo, a great little site with really good iPhone wallpapers. These are quality wallpapers made by real designers. Well, today I happened upon a Smashing Magazine article with 100 really sweet iPhone wallpapers, which includes Poolgo in its list, but also includes way more other wallpapers. I just had to post and update with a link to this Smashing Magazine article, because it really goes way above and beyond what I wrote.
+If you’re looking for some great iPhone or iPod Touch wallpapers, you need to read this article.
 </description>
     </item>
     
@@ -32,13 +33,22 @@
     </item>
     
     <item>
-      <title>100 Really Good Quality iPhone and iPod Touch Wallpapers</title>
-      <link>//articles/100-really-good-quality-iphone-and-ipod-touch-wallpapers/</link>
-      <pubDate>Tue, 06 Jan 2009 14:52:30 -0800</pubDate>
-      <guid isPermaLink="true">//articles/100-really-good-quality-iphone-and-ipod-touch-wallpapers/</guid>
+      <title>PSA: Why your code changes are not displaying after browser refresh</title>
+      <link>//articles/code-changes-not-displaying-after-refresh/</link>
+      <pubDate>Fri, 28 Mar 2014 13:37:00 -0700</pubDate>
+      <guid isPermaLink="true">//articles/code-changes-not-displaying-after-refresh/</guid>
       <author>peter</author>
-      <description>In my last post, I wrote about Poolgo, a great little site with really good iPhone wallpapers. These are quality wallpapers made by real designers. Well, today I happened upon a Smashing Magazine article with 100 really sweet iPhone wallpapers, which includes Poolgo in its list, but also includes way more other wallpapers. I just had to post and update with a link to this Smashing Magazine article, because it really goes way above and beyond what I wrote.
-If you’re looking for some great iPhone or iPod Touch wallpapers, you need to read this article.
+      <description>After weeks of frustration, I finally figured out why my PHP code changes on my local development box weren’t always coming up in the browser after several refreshes. As it turns out, it’s a new OPCache setting as of PHP 5.5 that comes with MAMP.
+</description>
+    </item>
+    
+    <item>
+      <title>Improving your jQuery code</title>
+      <link>//articles/improving-your-jquery-code/</link>
+      <pubDate>Sat, 16 Nov 2013 16:32:21 -0800</pubDate>
+      <guid isPermaLink="true">//articles/improving-your-jquery-code/</guid>
+      <author>peter</author>
+      <description>Lately, I’ve been trying to improve my jQuery code performance, and get a better handle on writing plain JavaScript. In terms of jQuery in particular, I came across this post today, which although a couple years old now, provides some great tips that I think a lot of people could benefit from reading. There are a few great examples of writing better performing jQuery DOM manipulation in there.
 </description>
     </item>
     
@@ -67,16 +77,6 @@ Create a copy of page.tpl.php and rename it to page-YOURPATH.tpl.php and begin t
     </item>
     
     <item>
-      <title>Improving your jQuery code</title>
-      <link>//articles/improving-your-jquery-code/</link>
-      <pubDate>Sat, 16 Nov 2013 16:32:21 -0800</pubDate>
-      <guid isPermaLink="true">//articles/improving-your-jquery-code/</guid>
-      <author>peter</author>
-      <description>Lately, I’ve been trying to improve my jQuery code performance, and get a better handle on writing plain JavaScript. In terms of jQuery in particular, I came across this post today, which although a couple years old now, provides some great tips that I think a lot of people could benefit from reading. There are a few great examples of writing better performing jQuery DOM manipulation in there.
-</description>
-    </item>
-    
-    <item>
       <title>jQuery Shine animation effect</title>
       <link>//articles/jquery-shine-animation-effect/</link>
       <pubDate>Sat, 13 Nov 2010 10:16:39 -0800</pubDate>
@@ -98,16 +98,6 @@ The entire thing really boils down to a few lines of jQuery Javascript code and 
     </item>
     
     <item>
-      <title>Quality iPhone and iPod Touch Wallpapers Poolga</title>
-      <link>//articles/quality-iphone-and-ipod-touch-wallpapers-poolga/</link>
-      <pubDate>Sun, 04 Jan 2009 15:20:50 -0800</pubDate>
-      <guid isPermaLink="true">//articles/quality-iphone-and-ipod-touch-wallpapers-poolga/</guid>
-      <author>peter</author>
-      <description>I just came across a great iPhone and iPod Touch wallpaper site called Poolga, which features quality wallpapers from designers and illustrators from around the world. This isn’t another cheesy wallpaper site. All the wallpapers have a great design flare to them and look like they were made by people with talent.
-</description>
-    </item>
-    
-    <item>
       <title>Trying Wintersmith for blogging</title>
       <link>//articles/trying-wintersmith-for-blogging/</link>
       <pubDate>Sun, 06 Apr 2014 13:37:00 -0700</pubDate>
@@ -115,6 +105,16 @@ The entire thing really boils down to a few lines of jQuery Javascript code and 
       <author>peter</author>
       <description>I’ve used WordPress, Drupal, and other platforms in past for personal blogs, and for the most part, they’ve always been
 overkill for what I needed the site to do. The idea of using a static site generator like Wintersmith for its the simplicity and performance sounded pretty appealing, so I’m giving it a try.
+</description>
+    </item>
+    
+    <item>
+      <title>Quality iPhone and iPod Touch Wallpapers Poolga</title>
+      <link>//articles/quality-iphone-and-ipod-touch-wallpapers-poolga/</link>
+      <pubDate>Sun, 04 Jan 2009 15:20:50 -0800</pubDate>
+      <guid isPermaLink="true">//articles/quality-iphone-and-ipod-touch-wallpapers-poolga/</guid>
+      <author>peter</author>
+      <description>I just came across a great iPhone and iPod Touch wallpaper site called Poolga, which features quality wallpapers from designers and illustrators from around the world. This isn’t another cheesy wallpaper site. All the wallpapers have a great design flare to them and look like they were made by people with talent.
 </description>
     </item>
     
