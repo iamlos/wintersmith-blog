@@ -522,7 +522,7 @@ article p.date {
 }
 
 .full-width {
-  height:1200px;
+  height:2000px;
   position:relative;
 
   article {
@@ -548,31 +548,31 @@ article p.date {
     }
   }
 
-  .art-1 {
+  .art-1, .art-13 {
     width:50%;
 
     height:400px;
   }
-  .art-2 {
+  .art-2, .art-14 {
     width:16.66667%;
     background:url('http://photos-f.ak.instagram.com/hphotos-ak-xaf1/10369296_1510144352538533_703488660_n.jpg') no-repeat;
     background-size: cover;
     left:50%;
   }
-  .art-3 {
+  .art-3, .art-15 {
     width:16.66667%;
     background:url('http://distilleryimage10.ak.instagram.com/b9993c82a4c811e382410efa3e38c48a_8.jpg') no-repeat;
     background-size: cover;
     left:50%;
     top:200px;
   }
-  .art-4 {
+  .art-4, .art-16 {
     width:33.333333%;
     height:400px;
     background:#000;
     left:66.66666667%;
   }
-  .art-5 {
+  .art-5, .art-10 {
     width:33.333333%;
     height:400px;
     background:url('http://distilleryimage0.ak.instagram.com/51f084e6a4a011e3811812cc5325a5e4_8.jpg') no-repeat;
@@ -580,14 +580,14 @@ article p.date {
     left:0%;
     top:400px;
   }
-  .art-6 {
+  .art-6, .art-11 {
     width:33.333333%;
     height:400px;
     background:black;
     left:33.3333333%;
     top:400px;
   }
-  .art-7 {
+  .art-7, .art-12 {
     width:33.333333%;
     height:400px;
     background:url('http://photos-h.ak.instagram.com/hphotos-ak-xpa1/926356_632705936794719_753474705_n.jpg') no-repeat;
@@ -609,6 +609,60 @@ article p.date {
     left:50%;
     top:800px;
   }
+
+  .art-10, .art-11, .art-12 {
+    top:1200px;
+  }
+
+  .art-11 {
+    background:#000;
+  }
+
+  .art-13, .art-14, .art-16 {
+    top:1600px;
+  }
+
+  .art-15 {
+    top:1800px;
+  }
+
+  .art-10 {
+    background-image:url('http://photos-f.ak.instagram.com/hphotos-ak-xpf1/10507862_673064066081637_377931792_n.jpg');
+  }
+
+  .art-12 {
+    background-image:url('http://distilleryimage10.ak.instagram.com/6f64181e24c411e3b41222000a1f8cb0_7.jpg');
+  }
+
+  .art-13 {
+    background:#000;
+  }
+
+  .art-14 {
+    background-image:url('http://distilleryimage2.ak.instagram.com/16b8f91c49f711e2bf8b22000a1fb004_7.jpg');
+  }
+
+  .art-15 {
+    background-image:url('http://distilleryimage9.ak.instagram.com/c0f3573c419711e2a07422000a1fab83_7.jpg');
+  }
+
+  .art-16 {
+    background:transparent;
+  }
+
+// reverse the last set
+  .art-13 {
+    width:33.333333%;
+    left:0;
+  }
+  .art-14, .art-15 {
+    left:33.333333%;
+  }
+  .art-16 {
+    width:50%;
+    left:50%;
+  }
+
 
 }
 
