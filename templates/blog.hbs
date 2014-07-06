@@ -1,0 +1,42 @@
+  {{> header}}
+
+
+  <main id="main-content" class="home">
+
+    {{> branding}}
+
+    <section class="container box">
+      {{#each articles}}
+      <article>
+        <header>
+          <h2><a href="{{url}}">{{title}}</a></h2>
+          <p class="date"><span>{{date metadata.date}}</span></p>
+        </header>
+        <section class="summary">
+          {{{typogr intro}}}
+          {{#if hasMore}}
+            <p class="more"><a href="{{url}}">Read more</a></p>
+          {{/if}}
+        </section>
+      </article>
+      {{/each}}
+
+      <footer>
+        <nav class="nav">
+          {{#if prevPage}}
+            <div class="newer">
+              <a href="{{prevPage.url}}">Newer » </a>
+            </div>
+          {{/if}}
+          {{#if nextPage}}
+            <div class="older">
+              <a href="{{nextPage.url}}"> « Older</a>
+            </div>
+          {{/if}}
+        </nav>
+      </footer>
+
+    </section>
+  </main>
+  {{> footer}}
+

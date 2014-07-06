@@ -11,43 +11,64 @@
 
     <i class="fa fa-angle-down scrolldown"></i>
   </header>
-
-  <main id="main-content" class="home">
-
-    {{> branding}}
-
-    <section class="container box">
-      {{#each articles}}
-      <article>
+<section class="full-width">
+      <article class="art-1 blog">
         <header>
-          <h2><a href="{{url}}">{{title}}</a></h2>
-          <p class="date"><span>{{date metadata.date}}</span></p>
+          <h2><a href="/articles/trying-wintersmith-for-blogging/">Trying Wintersmith for blogging</a></h2>
+          <p class="date"><span>April 06, 2014</span></p>
         </header>
         <section class="summary">
-          {{{typogr intro}}}
-          {{#if hasMore}}
-            <p class="more"><a href="{{url}}">Read more</a></p>
-          {{/if}}
+          <p>I’ve used WordPress, Drupal, and other platforms in past for personal blogs, and for the most part, they’ve always been
+overkill for what I needed the site to do. The idea of using a static site generator like <a href="http://www.wintersmith.io/"> Wintersmith</a> for its the simplicity and performance sounded pretty appealing, so I’m giving it a&nbsp;try.
+
+            </p><p class="more"><a href="/articles/trying-wintersmith-for-blogging/">Read more</a></p>
+
         </section>
       </article>
-      {{/each}}
+      <article class="art-2 instagram"><a href="http://instagram.com/petethedude" target="_blank"><i class="fa fa-instagram"></i></a></article>
+      <article class="art-3 instagram"><a href="http://instagram.com/petethedude" target="_blank"><i class="fa fa-instagram"></i></a></article>
+      <article class="art-4 twitter">
+        <a href="http://twitter.com/petethedude" target="_blank"><i class="fa fa-twitter"></i></a><br>
+        Started the day by waking up early and hitting the gym. Had a 440 calorie ice cream at lunch. #balance
+      </article>
 
-      <footer>
-        <nav class="nav">
-          {{#if prevPage}}
-            <div class="newer">
-              <a href="{{prevPage.url}}">Newer » </a>
-            </div>
-          {{/if}}
-          {{#if nextPage}}
-            <div class="older">
-              <a href="{{nextPage.url}}"> « Older</a>
-            </div>
-          {{/if}}
-        </nav>
-      </footer>
+      <article class="art-5 instagram"><a href="http://instagram.com/petethedude" target="_blank"><i class="fa fa-instagram"></i></a></article>
+      <article class="art-6 twitter">
+        <a href="http://twitter.com/petethedude" target="_blank"><i class="fa fa-twitter"></i></a><br>
+        Google launches Web Starter Kit https://developers.google.com/web/starter-kit/
 
+      </article>
+      <article class="art-7 instagram"><a href="http://instagram.com/petethedude" target="_blank"><i class="fa fa-instagram"></i></a></article>
+
+      <article class="art-8 blog">
+        <header>
+          <h2><a href="/articles/code-changes-not-displaying-after-refresh/">PSA: Why your code changes are not displaying after browser refresh</a></h2>
+          <p class="date"><span>March 28, 2014</span></p>
+        </header>
+        <section class="summary">
+          <p>After weeks of frustration, I finally figured out why my <span class="caps">PHP</span> code changes on my local development box weren’t always coming up in the browser after several refreshes. As it turns out, it’s a new OPCache setting as of PHP 5.5 that comes with&nbsp;MAMP.
+
+
+            </p><p class="more"><a href="/articles/code-changes-not-displaying-after-refresh/">Read more</a></p>
+
+        </section>
+      </article>
+      <article class="art-9 blog">
+        <header>
+          <h2><a href="/articles/new-ghost-inspired-wordpress-theme/">New Ghost.js inspired WordPress theme</a></h2>
+          <p class="date"><span>December 15, 2013</span></p>
+        </header>
+        <section class="summary">
+          <p>Recently, I’ve been inspired by the Ghost blogging platform, which I think has a really clean and elegant default theme, so I built a WordPress theme that borrows from some of the ideas that I liked from that&nbsp;theme.
+
+
+            </p><p class="more"><a href="/articles/new-ghost-inspired-wordpress-theme/">Read more</a></p>
+
+        </section>
+      </article>
     </section>
-  </main>
+
+
+
   {{> footer}}
 

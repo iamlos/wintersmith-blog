@@ -17,12 +17,13 @@ module.exports = function (grunt) {
       }
     },
     watch: {
+
       // options: {
       //   livereload: false
       // },
       sass: {
         files: ['contents/scss/{,**/}*.{scss,sass}'],
-        tasks: ['compass']
+        tasks: ['compass', 'wintersmith:build']
       },
       images: {
         files: ['contents/img/**']
@@ -30,14 +31,18 @@ module.exports = function (grunt) {
       css: {
         files: ['contents/css/{,**/}*.css']
       },
-      js: {
-        files: ['contents/js/{,**/}*.js', '!contents/js/{,**/}*.min.js']
-        // tasks: ['jshint', 'uglify:dist']
+      templates: {
+        files: ['templates/**'],
+        tasks: ['wintersmith:build']
       }
+      // js: {
+      //   files: ['contents/js/{,**/}*.js', '!contents/js/{,**/}*.min.js']
+      //   // tasks: ['jshint', 'uglify:dist']
+      // }
     },
 
     concurrent: {
-        preview: ['compass', 'wintersmith:preview']
+      preview: ['compass', 'wintersmith:preview']
     },
 
     compass: {
@@ -241,7 +246,7 @@ grunt.registerTask('deploy', [
 
   grunt.registerTask('default', [
     'watch',
-    'wintersmith:build',
+
     //'uglify:dist',
     //'jshint:dist'
   ]);
