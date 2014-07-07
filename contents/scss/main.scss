@@ -538,12 +538,19 @@ article p.date {
 
   .twitter {
     padding:3em;
+    a {
+      @include transform( translateY(-50%) );
+      top:50%;
+      position:relative;
+      display:table;
+    }
+
   }
 
   .instagram {
     i {
       position:absolute;
-      right:10px;
+      left:10px;
       bottom:10px;
     }
   }
@@ -569,7 +576,7 @@ article p.date {
   .art-4, .art-16 {
     width:33.333333%;
     height:400px;
-    background:#000;
+    background:#40b9af;
     left:66.66666667%;
   }
   .art-5, .art-10 {
@@ -583,7 +590,7 @@ article p.date {
   .art-6, .art-11 {
     width:33.333333%;
     height:400px;
-    background:#000;
+    background:#40b9af;
     left:33.3333333%;
     top:400px;
   }
@@ -598,7 +605,7 @@ article p.date {
   .art-8 {
     width:50%;
     height:400px;
-    background:#000;
+    background:#40b9af;
     left:0%;
     top:800px;
   }
@@ -615,7 +622,7 @@ article p.date {
   }
 
   .art-11 {
-    background:#000;
+    background:#40b9af;
   }
 
   .art-13, .art-14, .art-16 {
@@ -635,7 +642,7 @@ article p.date {
   }
 
   .art-13 {
-    background:#000;
+    background:#40b9af;
   }
 
   .art-14 {
