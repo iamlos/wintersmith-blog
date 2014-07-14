@@ -11,7 +11,8 @@ require.config({
     // Modules
     app: 'assets/js/app',
     domReady: 'assets/js/modules/domReady',
-    cover: 'assets/js/modules/cover'
+    cover: 'assets/js/modules/cover',
+    feeds: 'assets/js/modules/feeds'
 
   },
   shim: {

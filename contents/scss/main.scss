@@ -530,6 +530,13 @@ article p.date {
     display:block;
     position:absolute;
     width:10%;
+
+    h2 {
+      font-size:1.8em;
+      text-transform: uppercase;
+      font-family: "proxima-nova-condensed",sans-serif;
+      line-height: 1.1;
+    }
   }
 
   .blog {
@@ -576,7 +583,7 @@ article p.date {
   .art-4, .art-16 {
     width:33.333333%;
     height:400px;
-    background:#40b9af;
+    background:#05b2c6;
     left:66.66666667%;
   }
   .art-5, .art-10 {
@@ -590,7 +597,7 @@ article p.date {
   .art-6, .art-11 {
     width:33.333333%;
     height:400px;
-    background:#40b9af;
+    background:#05b2c6;
     left:33.3333333%;
     top:400px;
   }
@@ -605,7 +612,7 @@ article p.date {
   .art-8 {
     width:50%;
     height:400px;
-    background:#40b9af;
+    background:#05b2c6;
     left:0%;
     top:800px;
   }
@@ -617,13 +624,16 @@ article p.date {
     top:800px;
   }
 
+
+
   .art-10, .art-11, .art-12 {
     top:1200px;
   }
 
   .art-11 {
-    background:#40b9af;
+    background:#05b2c6;
   }
+
 
   .art-13, .art-14, .art-16 {
     top:1600px;
@@ -642,7 +652,7 @@ article p.date {
   }
 
   .art-13 {
-    background:#40b9af;
+    background:#05b2c6;
   }
 
   .art-14 {
