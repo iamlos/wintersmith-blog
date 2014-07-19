@@ -43,13 +43,13 @@ define([], function(){
           animate();
 
 
-          $('.frame').css('opacity', 1);
-          $('.overlay').css('opacity', 0.7);
+          // $('.frame').css('opacity', 1);
+          // $('.overlay').css('opacity', 0.7);
 
 
-          setTimeout(function(){
-            $('.intro-text').css('opacity', 1).find('.inner').addClass('moveup');
-          }, 500);
+          // setTimeout(function(){
+          //   $('.intro-text').css('opacity', 1).find('.inner').addClass('moveup');
+          // }, 500);
 
 
       }

@@ -11,16 +11,20 @@
 
     <i class="fa fa-angle-down scrolldown"></i>
   </header>
+
+
+
   <section class="full-width">
       <article class="art-1 blog">
         <header>
-          <h2><a href="/articles/trying-wintersmith-for-blogging/">Trying Wintersmith for blogging</a></h2>
-          <p class="date"><span>April 06, 2014</span></p>
+          <h2><a href="{{articles.[0].url}}">{{articles.[0].title}}</a></h2>
+          <p class="date"><span>{{articles.[0].date metadata.date}}</span></p>
         </header>
         <section class="summary">
-          <p>I’ve used WordPress, Drupal, and other platforms in past for personal blogs, and for the most part, they’ve always been
-          overkill for what I needed the site to do. The idea of using a static site generator like <a href="http://www.wintersmith.io/"> Wintersmith</a> for its the simplicity and performance sounded pretty appealing, so I’m giving it a&nbsp;try.
-            </p><p class="more"><a href="/articles/trying-wintersmith-for-blogging/">Read more</a></p>
+          {{{typogr articles.[0].intro}}}
+          {{#if articles.[0].hasMore}}
+            <p class="more"><a href="{{articles.[0].url}}">Read more</a></p>
+          {{/if}}
         </section>
       </article>
 
@@ -30,7 +34,7 @@
 
       <article class="art-4 twitter">
         <a href="http://twitter.com/petethedude" target="_blank">
-        Started the day by waking up early and hitting the gym. Had a 440 calorie ice cream at lunch. #balance
+        <span class="tweet"></span>
         <br><i class="fa fa-twitter"></i> @petethedude
       </a>
       </article>
@@ -39,7 +43,7 @@
 
       <article class="art-6 twitter">
         <a href="http://twitter.com/petethedude" target="_blank">
-        Google launches Web Starter Kit https://developers.google.com/web/starter-kit/
+        <span class="tweet"></span>
         <br><i class="fa fa-twitter"></i> @petethedude
       </a>
       </article>
@@ -71,7 +75,7 @@
 
       <article class="art-11 twitter">
         <a href="http://twitter.com/petethedude" target="_blank">
-        Epic booing. “@HarrisonMooney: Gary Bettman vs. booing Philadelphia fans at the NHL draft (Video) | Puck Daddy http://sports.yahoo.com/blogs/nhl-puck-daddy/gary-bettman-vs--booing-philadelphia-fans-at-the-nhl-draft--video-011907747.html?soc_src=mediacontentstory …”
+        <span class="tweet"></span>
         <br><i class="fa fa-twitter"></i> @petethedude
       </a>
       </article>
@@ -80,7 +84,7 @@
 
       <article class="art-13 twitter">
         <a href="http://twitter.com/petethedude" target="_blank">
-        Nice clean ZSH theme https://github.com/sindresorhus/pure … by sindresorhus. This guy does everything.
+        <span class="tweet"></span>
         <br><i class="fa fa-twitter"></i> @petethedude
       </a>
       </article>
@@ -92,7 +96,16 @@
       <article class="art-15 instagram"></article>
 
       <article class="art-16 blog">
-        <header><h2><a href="/articles/improving-your-jquery-code/">Improving your jQuery code</a></h2><p class="date"><span>November 16, 2013</span></p></header><section class="summary"><p>Lately, I’ve been trying to improve my jQuery code performance, and get a better handle on writing plain JavaScript. In terms of jQuery in particular, I came across <a href="http://24ways.org/2011/your-jquery-now-with-less-suck/">this post</a> today, which although a couple years old now, provides some great tips that I think a lot of people could benefit from reading. There are a few great examples of writing better performing jQuery <span class="caps">DOM</span> manipulation in&nbsp;there.</p></section>
+        <header>
+          <h2><a href="{{articles.[3].url}}">{{articles.[3].title}}</a></h2>
+          <p class="date"><span>{{articles.[3].date metadata.date}}</span></p>
+        </header>
+        <section class="summary">
+          {{{typogr articles.[3].intro}}}
+          {{#if articles.[3].hasMore}}
+            <p class="more"><a href="{{articles.[3].url}}">Read more</a></p>
+          {{/if}}
+        </section>
       </article>
 
 

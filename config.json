@@ -1,6 +1,6 @@
 {
   "locals": {
-    "url": "/",
+    "url": "http://technoholic.ca",
     "name": "Technology and Design - technoholic.ca",
     "owner": "Peter Szymczak",
     "description": "One man's obsession with creating the interwebs.",
@@ -25,7 +25,9 @@
   },
   "paginator": {
     "perPage": 4,
-    "template": "home.hbs"
+    "template": "blog.hbs",
+    "first": "articles/index.html",
+    "filename": "articles/page/%d/index.html"
   },
   "ignore": [
     "**/.DS_Store"

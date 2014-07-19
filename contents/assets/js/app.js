@@ -6,7 +6,7 @@ define(['jquery', 'domReady', 'tweenlite', 'easing', 'easeljs', 'cover', 'feeds'
     }
 
     if ($('.instagram, .twitter').length){
-      feeds.init( );
+      feeds.init();
     }
 
 

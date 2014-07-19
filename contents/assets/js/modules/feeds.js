@@ -10,7 +10,7 @@ define([], function(){
 
     },
     getFeeds: function(){
-      var url = '/api/';
+      var url = 'http://owns.io/api';
       $.ajax({
            url: url,
            contentType: 'application/json; charset=utf-8',
@@ -22,19 +22,26 @@ define([], function(){
 
              //Download progress
              xhr.addEventListener('progress', function(evt){
+
                if (evt.lengthComputable) {
                  var percentComplete = evt.loaded / evt.total;
 
-                 //Do something with download progress
-                 // var statusbar = Math.ceil(percentComplete * 100);
+                 // Do something with download progress
+                 var statusbar = Math.ceil(percentComplete * 100);
 
-                 // $('.loading').css('width', statusbar'%');
+                 $('.loading').css('width', statusbar + '%');
 
-                 // if (statusbar === 100){
-                 //   setTimeout(function(){
-                 //     $('.loading').remove();
-                 //   }, 500);
-                 // }
+                 if (statusbar === 100){
+                   setTimeout(function(){
+                     $('.loading').remove();
+                     $('.frame').css('opacity', 1);
+                     $('.overlay').css('opacity', 0.7);
+                      setTimeout(function(){
+                        $('.intro-text').css('opacity', 1).find('.inner').addClass('moveup');
+                        $('.full-width').css({'opacity': 1, 'height':'2000px'});
+                      }, 500);
+                   }, 500);
+                 }
 
                }
              }, false);
@@ -43,12 +50,7 @@ define([], function(){
          });
 
 
-         // $('.overlay').removeClass('loading');
 
-         //  frame.css('opacity', 1);
-
-
-         //  }, 500);
 
     },
     ajaxSuccess: function(data){
@@ -60,16 +62,11 @@ define([], function(){
           }
 
           for (var i in data[key].twitter) {
-            console.log(data[key].instagram[i].tweet);
-            // $('.instagram').eq(i).css('background-image', 'url('+data[key].instagram[i].image+')');
+            $('.twitter').eq(i).find('.tweet').append(data[key].twitter[i].tweet);
           }
 
         }
       }
-
-    },
-    renderInstagram: function(){
-
 
     }
 

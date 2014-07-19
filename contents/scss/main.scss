@@ -189,11 +189,11 @@ a:link, a:visited {
 
 .overlay .loading {
   background:#444;
-  height:8px;
+  height:10px;
   width:0%;
   display:block;
   content:'';
-  @include transition(width 0.3s linear);
+  @include transition(width 0.4s linear);
 }
 
 
@@ -287,6 +287,7 @@ a:link, a:visited {
 }
 
 
+
 .intro-text {
   position: absolute;
   top: 0;
@@ -371,7 +372,7 @@ a:link, a:visited {
   -webkit-perspective: 1000;
   -webkit-transform: translate3d(0, 0, 0);
   opacity:0;
-  @include transition(opacity 0.4s linear);
+  @include transition(opacity 0.3s linear);
 
   canvas {
     display:table-cell;
@@ -522,8 +523,11 @@ article p.date {
 }
 
 .full-width {
-  height:2000px;
   position:relative;
+  height:0;
+  overflow:hidden;
+  @include transition(height 0.4s linear);
+
 
   article {
     min-height:200px;
@@ -555,6 +559,9 @@ article p.date {
   }
 
   .instagram {
+    background-repeat: no-repeat;
+    background-size: cover;
+
     i {
       position:absolute;
       left:10px;
@@ -569,14 +576,10 @@ article p.date {
   }
   .art-2, .art-14 {
     width:16.66667%;
-    background:url('http://photos-f.ak.instagram.com/hphotos-ak-xaf1/10369296_1510144352538533_703488660_n.jpg') no-repeat;
-    background-size: cover;
     left:50%;
   }
   .art-3, .art-15 {
     width:16.66667%;
-    background:url('http://distilleryimage10.ak.instagram.com/b9993c82a4c811e382410efa3e38c48a_8.jpg') no-repeat;
-    background-size: cover;
     left:50%;
     top:200px;
   }
@@ -589,8 +592,6 @@ article p.date {
   .art-5, .art-10 {
     width:33.333333%;
     height:400px;
-    background:url('http://distilleryimage0.ak.instagram.com/51f084e6a4a011e3811812cc5325a5e4_8.jpg') no-repeat;
-    background-size:cover;
     left:0%;
     top:400px;
   }
@@ -604,8 +605,6 @@ article p.date {
   .art-7, .art-12 {
     width:33.333333%;
     height:400px;
-    background:url('http://photos-h.ak.instagram.com/hphotos-ak-xpa1/926356_632705936794719_753474705_n.jpg') no-repeat;
-    background-size: cover;
     left:66.66666667%;
     top:400px;
   }
@@ -643,24 +642,8 @@ article p.date {
     top:1800px;
   }
 
-  .art-10 {
-    background-image:url('http://photos-f.ak.instagram.com/hphotos-ak-xpf1/10507862_673064066081637_377931792_n.jpg');
-  }
-
-  .art-12 {
-    background-image:url('http://distilleryimage10.ak.instagram.com/6f64181e24c411e3b41222000a1f8cb0_7.jpg');
-  }
-
   .art-13 {
     background:#05b2c6;
-  }
-
-  .art-14 {
-    background-image:url('http://distilleryimage2.ak.instagram.com/16b8f91c49f711e2bf8b22000a1fb004_7.jpg');
-  }
-
-  .art-15 {
-    background-image:url('http://distilleryimage9.ak.instagram.com/c0f3573c419711e2a07422000a1fab83_7.jpg');
   }
 
   .art-16 {

@@ -34,11 +34,11 @@ module.exports = function (grunt) {
       templates: {
         files: ['templates/**'],
         tasks: ['wintersmith:build']
+      },
+      js: {
+        files: ['contents/assets/js/{,**/}*.js', '!contents/assets/js/{,**/}*.min.js'],
+        tasks: ['wintersmith:build']
       }
-      // js: {
-      //   files: ['contents/js/{,**/}*.js', '!contents/js/{,**/}*.min.js']
-      //   // tasks: ['jshint', 'uglify:dist']
-      // }
     },
 
     concurrent: {
