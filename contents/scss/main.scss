@@ -7,6 +7,7 @@
 $ptab: 600px;
 $portraittab: 768px;
 $tab: 1024px;
+$mobileOnly: max-width 600px;
 
 $menuanimate: all 0.4s cubic-bezier(0.75, 0.25, 0.25, 0.75);
 
@@ -524,16 +525,36 @@ article p.date {
 
 .full-width {
   position:relative;
-  height:0;
-  overflow:hidden;
-  @include transition(height 0.4s linear);
-
+  @include breakpoint($ptab){
+    height:0;
+    overflow:hidden;
+    @include transition(height 0.4s linear);
+  }
 
   article {
+    width:100%;
     min-height:200px;
     display:block;
-    position:absolute;
-    width:10%;
+
+    // TODO: do this better
+    @include breakpoint($mobileOnly){
+      &.instagram {
+        min-height:320px;
+      }
+
+    }
+
+    @include breakpoint($mobileOnly){
+      &:nth-child(even){
+        background-color:#05b2c6;
+      }
+    }
+
+    @include breakpoint($ptab){
+
+      position:absolute;
+      width:10%;
+    }
 
     h2 {
       font-size:1.8em;
@@ -544,16 +565,25 @@ article p.date {
   }
 
   .blog {
-    padding:3em;
+    padding:2em;
+    @include breakpoint($ptab){
+      padding:3em;
+    }
+
   }
 
   .twitter {
-    padding:3em;
+    padding:2em;
+    @include breakpoint($ptab){
+      padding:3em;
+    }
     a {
-      @include transform( translateY(-50%) );
-      top:50%;
-      position:relative;
-      display:table;
+      @include breakpoint($ptab){
+        @include transform( translateY(-50%) );
+        top:50%;
+        position:relative;
+        display:table;
+      }
     }
 
   }
@@ -569,98 +599,136 @@ article p.date {
     }
   }
 
-  .art-1, .art-13 {
-    width:50%;
 
-    height:400px;
+
+  .art-1, .art-13 {
+    @include breakpoint($ptab){
+      width:50%;
+      height:400px;
+    }
   }
   .art-2, .art-14 {
-    width:16.66667%;
-    left:50%;
+    @include breakpoint($ptab){
+      width:16.66667%;
+      left:50%;
+    }
   }
   .art-3, .art-15 {
-    width:16.66667%;
-    left:50%;
-    top:200px;
+    @include breakpoint($ptab){
+      width:16.66667%;
+      left:50%;
+      top:200px;
+    }
   }
   .art-4, .art-16 {
-    width:33.333333%;
-    height:400px;
-    background:#05b2c6;
-    left:66.66666667%;
+
+    @include breakpoint($ptab){
+      background:#05b2c6;
+      width:33.333333%;
+      height:400px;
+      left:66.66666667%;
+    }
   }
   .art-5, .art-10 {
-    width:33.333333%;
-    height:400px;
-    left:0%;
-    top:400px;
+    @include breakpoint($ptab){
+      width:33.333333%;
+      height:400px;
+      left:0%;
+      top:400px;
+    }
   }
   .art-6, .art-11 {
-    width:33.333333%;
-    height:400px;
-    background:#05b2c6;
-    left:33.3333333%;
-    top:400px;
+
+    @include breakpoint($ptab){
+      background:#05b2c6;
+      width:33.333333%;
+      height:400px;
+      left:33.3333333%;
+      top:400px;
+    }
   }
   .art-7, .art-12 {
-    width:33.333333%;
-    height:400px;
-    left:66.66666667%;
-    top:400px;
+    @include breakpoint($ptab){
+      width:33.333333%;
+      height:400px;
+      left:66.66666667%;
+      top:400px;
+    }
   }
   .art-8 {
-    width:50%;
-    height:400px;
-    background:#05b2c6;
-    left:0%;
-    top:800px;
+
+    @include breakpoint($ptab){
+      background:#05b2c6;
+      width:50%;
+      height:400px;
+      left:0%;
+      top:800px;
+    }
   }
   .art-9 {
-    width:50%;
-    height:400px;
-    background:transparent;
-    left:50%;
-    top:800px;
+    @include breakpoint($ptab){
+      width:50%;
+      height:400px;
+      background:transparent;
+      left:50%;
+      top:800px;
+    }
   }
 
 
 
   .art-10, .art-11, .art-12 {
-    top:1200px;
+    @include breakpoint($ptab){
+      top:1200px;
+    }
   }
 
   .art-11 {
-    background:#05b2c6;
+    @include breakpoint($ptab){
+      background:#05b2c6;
+    }
   }
 
 
   .art-13, .art-14, .art-16 {
-    top:1600px;
+    @include breakpoint($ptab){
+      top:1600px;
+    }
   }
 
   .art-15 {
-    top:1800px;
+    @include breakpoint($ptab){
+      top:1800px;
+    }
   }
 
   .art-13 {
-    background:#05b2c6;
+    @include breakpoint($ptab){
+      background:#05b2c6;
+    }
   }
 
   .art-16 {
     background:transparent;
   }
 
-// reverse the last set
+  // reverse the last set
   .art-13 {
-    width:33.333333%;
-    left:0;
+    @include breakpoint($ptab){
+      width:33.333333%;
+      left:0;
+    }
   }
   .art-14, .art-15 {
-    left:33.333333%;
+    @include breakpoint($ptab){
+      left:33.333333%;
+    }
   }
   .art-16 {
-    width:50%;
-    left:50%;
+    @include breakpoint($ptab){
+      width:50%;
+      left:50%;
+    }
   }
 
 

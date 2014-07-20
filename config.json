@@ -8,8 +8,8 @@
   },
   "plugins": [
     "./plugins/paginator.coffee",
-    "wintersmith-handlebars",
-    "./plugins/datajson.coffee"
+    "./plugins/home.coffee",
+    "wintersmith-handlebars"
   ],
   "shared": {
     "articles": "articles"

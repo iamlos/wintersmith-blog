@@ -18,7 +18,7 @@
       <article class="art-1 blog">
         <header>
           <h2><a href="{{articles.[0].url}}">{{articles.[0].title}}</a></h2>
-          <p class="date"><span>{{articles.[0].date metadata.date}}</span></p>
+          <p class="date"><span>{{date articles.[0].metadata.date}}</span></p>
         </header>
         <section class="summary">
           {{{typogr articles.[0].intro}}}
@@ -52,22 +52,27 @@
 
       <article class="art-8 blog">
         <header>
-          <h2><a href="/articles/code-changes-not-displaying-after-refresh/">PSA: Why your code changes are not displaying after browser refresh</a></h2>
-          <p class="date"><span>March 28, 2014</span></p>
+          <h2><a href="{{articles.[1].url}}">{{articles.[1].title}}</a></h2>
+          <p class="date"><span>{{date articles.[1].metadata.date}}</span></p>
         </header>
         <section class="summary">
-          <p>After weeks of frustration, I finally figured out why my <span class="caps">PHP</span> code changes on my local development box weren’t always coming up in the browser after several refreshes. As it turns out, it’s a new OPCache setting as of PHP 5.5 that comes with&nbsp;MAMP.
-            </p><p class="more"><a href="/articles/code-changes-not-displaying-after-refresh/">Read more</a></p>
+          {{{typogr articles.[1].intro}}}
+          {{#if articles.[1].hasMore}}
+            <p class="more"><a href="{{articles.[1].url}}">Read more</a></p>
+          {{/if}}
         </section>
       </article>
 
       <article class="art-9 blog">
         <header>
-          <h2><a href="/articles/new-ghost-inspired-wordpress-theme/">New Ghost.js inspired WordPress theme</a></h2>
-          <p class="date"><span>December 15, 2013</span></p>
+          <h2><a href="{{articles.[2].url}}">{{articles.[2].title}}</a></h2>
+          <p class="date"><span>{{date articles.[2].metadata.date}}</span></p>
         </header>
         <section class="summary">
-          <p>Recently, I’ve been inspired by the Ghost blogging platform, which I think has a really clean and elegant default theme, so I built a WordPress theme that borrows from some of the ideas that I liked from that&nbsp;theme.</p><p class="more"><a href="/articles/new-ghost-inspired-wordpress-theme/">Read more</a></p>
+          {{{typogr articles.[2].intro}}}
+          {{#if articles.[2].hasMore}}
+            <p class="more"><a href="{{articles.[2].url}}">Read more</a></p>
+          {{/if}}
         </section>
       </article>
 
@@ -98,7 +103,7 @@
       <article class="art-16 blog">
         <header>
           <h2><a href="{{articles.[3].url}}">{{articles.[3].title}}</a></h2>
-          <p class="date"><span>{{articles.[3].date metadata.date}}</span></p>
+          <p class="date"><span>{{date articles.[3].metadata.date}}</span></p>
         </header>
         <section class="summary">
           {{{typogr articles.[3].intro}}}
