@@ -1,16 +1,23 @@
 /**
- *   Front Cover
+ *   Feeds
  */
 define([], function(){
   return {
 
     init: function(){
-
+      var self = this;
       this.getFeeds();
+      this.setHeights();
+
+      $(window).resize(function(event) {
+        self.setHeights();
+      });
 
     },
+
     getFeeds: function(){
-      var url = 'http://owns.io/api';
+      //var self = this;
+      var url = 'http://23.239.7.50/api';
       $.ajax({
            url: url,
            contentType: 'application/json; charset=utf-8',
@@ -23,6 +30,7 @@ define([], function(){
              //Download progress
              xhr.addEventListener('progress', function(evt){
 
+
                if (evt.lengthComputable) {
                  var percentComplete = evt.loaded / evt.total;
 
@@ -32,6 +40,7 @@ define([], function(){
                  $('.loading').css('width', statusbar + '%');
 
                  if (statusbar === 100){
+
                    setTimeout(function(){
                      $('.loading').remove();
                      $('.frame').css('opacity', 1);
@@ -68,6 +77,26 @@ define([], function(){
         }
       }
 
+    },
+
+    setHeights: function(){
+      var squareH = $('.square').innerWidth();
+
+      $('.square, .rectangle').each(function() {
+        $(this).css('height', squareH);
+      });
+
+      $('.square-small').each(function() {
+        $(this).css('height', squareH/2);
+      });
+
+
+
+
+
+      // get the width of a square.. that's the basis of height
+      // height of rectangles same.. height of small squares is half
+      // add the heights of each row to get full height
     }
 
 
