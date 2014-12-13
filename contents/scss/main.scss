@@ -533,7 +533,7 @@ article p.date {
 
   article {
     width:100%;
-    //min-height:200px;
+    min-height:200px;
     display:block;
 
     // TODO: do this better
@@ -599,79 +599,76 @@ article p.date {
     }
   }
 
-  .square {
-    width:33.333333%;
-  }
-
-  .square-small {
-    width:16.66667%;
-  }
-
-  .rectangle {
-    width:50%;
-  }
 
 
-
-  .item-1, .item-13 {
+  .art-1, .art-13 {
     @include breakpoint($ptab){
-      // height:400px;
+      width:50%;
+      height:400px;
     }
   }
-  .item-2, .item-14 {
+  .art-2, .art-14 {
     @include breakpoint($ptab){
-
+      width:16.66667%;
       left:50%;
     }
   }
-  .item-3, .item-15 {
+  .art-3, .art-15 {
     @include breakpoint($ptab){
+      width:16.66667%;
       left:50%;
       top:200px;
     }
   }
-  .item-4, .item-16 {
+  .art-4, .art-16 {
+
     @include breakpoint($ptab){
       background:#05b2c6;
-      // height:400px;
+      width:33.333333%;
+      height:400px;
       left:66.66666667%;
     }
   }
-  .item-5, .item-10 {
+  .art-5, .art-10 {
     @include breakpoint($ptab){
-      // height:400px;
+      width:33.333333%;
+      height:400px;
       left:0%;
       top:400px;
     }
   }
-  .item-6, .item-11 {
+  .art-6, .art-11 {
 
     @include breakpoint($ptab){
       background:#05b2c6;
-      // height:400px;
+      width:33.333333%;
+      height:400px;
       left:33.3333333%;
       top:400px;
     }
   }
-  .item-7, .item-12 {
+  .art-7, .art-12 {
     @include breakpoint($ptab){
-      // height:400px;
+      width:33.333333%;
+      height:400px;
       left:66.66666667%;
       top:400px;
     }
   }
-  .item-8 {
+  .art-8 {
 
     @include breakpoint($ptab){
       background:#05b2c6;
-      // height:400px;
+      width:50%;
+      height:400px;
       left:0%;
       top:800px;
     }
   }
-  .item-9 {
+  .art-9 {
     @include breakpoint($ptab){
-      // height:400px;
+      width:50%;
+      height:400px;
       background:transparent;
       left:50%;
       top:800px;
@@ -680,54 +677,56 @@ article p.date {
 
 
 
-  .item-10, .item-11, .item-12 {
+  .art-10, .art-11, .art-12 {
     @include breakpoint($ptab){
       top:1200px;
     }
   }
 
-  .item-11 {
+  .art-11 {
     @include breakpoint($ptab){
       background:#05b2c6;
     }
   }
 
 
-  .item-13, .item-14, .item-16 {
+  .art-13, .art-14, .art-16 {
     @include breakpoint($ptab){
       top:1600px;
     }
   }
 
-  .item-15 {
+  .art-15 {
     @include breakpoint($ptab){
       top:1800px;
     }
   }
 
-  .item-13 {
+  .art-13 {
     @include breakpoint($ptab){
       background:#05b2c6;
     }
   }
 
-  .item-16 {
+  .art-16 {
     background:transparent;
   }
 
   // reverse the last set
-  .item-13 {
+  .art-13 {
     @include breakpoint($ptab){
+      width:33.333333%;
       left:0;
     }
   }
-  .item-14, .item-15 {
+  .art-14, .art-15 {
     @include breakpoint($ptab){
       left:33.333333%;
     }
   }
-  .item-16 {
+  .art-16 {
     @include breakpoint($ptab){
+      width:50%;
       left:50%;
     }
   }
